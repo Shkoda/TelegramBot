@@ -1,0 +1,8 @@
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\TelegramBot.exe.config
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\TelegramBot.XML
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\TelegramBot.exe
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\TelegramBot.pdb
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\FSharp.Core.dll
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\FSharp.Core.xml
+E:\FSharpWorkspace\TelegramBot\TelegramBot\obj\Debug\TelegramBot.exe
+E:\FSharpWorkspace\TelegramBot\TelegramBot\obj\Debug\TelegramBot.pdb
