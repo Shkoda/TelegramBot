@@ -6,3 +6,13 @@ E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\FSharp.Core.dll
 E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\FSharp.Core.xml
 E:\FSharpWorkspace\TelegramBot\TelegramBot\obj\Debug\TelegramBot.exe
 E:\FSharpWorkspace\TelegramBot\TelegramBot\obj\Debug\TelegramBot.pdb
+E:\FSharpWorkspace\TelegramBot\TelegramBot\obj\Debug\TelegramBot.fsproj.TelegramBot.exe.config
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\FSharp.Data.dll
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\Newtonsoft.Json.dll
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\System.Net.Http.Formatting.dll
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\Telegram.Bot.dll
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\FSharp.Data.pdb
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\FSharp.Data.xml
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\Newtonsoft.Json.xml
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\System.Net.Http.Formatting.xml
+E:\FSharpWorkspace\TelegramBot\TelegramBot\bin\Debug\Telegram.Bot.xml
