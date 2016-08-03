@@ -57,6 +57,7 @@
     <Compile Include="AssemblyInfo.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />
+    <Compile Include="JsonParser.fs" />
     <Compile Include="Telegram.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>

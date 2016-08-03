@@ -2,6 +2,7 @@
 
 module Main =
   open FSharp.Data
+  open System
 
   let TOKEN  = "231953668:AAHUQ8HEQr8Scnl_ViDZ6dWtH9JXDeMy5hw"
   let PREFIX = "/"
@@ -18,6 +19,28 @@ module Main =
   let handler (message: JsonValue) =
     let cid = Telegram.chat_id message
     let body = Telegram.message_text message
+    Console.WriteLine( message.ToString())
+
+    let parsed = JsonParser.Message.Parse(message.ToString())
+    Console.WriteLine("from "+parsed.Message.From.Username)
+
+
+    let match_entity (e: JsonParser.Message.Entity) (raw_body : string)=
+        let value = raw_body.Substring(e.Offset, e.Length)
+        match e.Type with
+        |"mention" ->  Telegram.sendMessage TOKEN cid ("mention "+value)
+        |"bot_command" -> Telegram.sendMessage TOKEN cid ("bot_command "+value)
+        |"hashtag" -> Telegram.sendMessage TOKEN cid ("hashtag "+value)
+        |_ -> ignore()
+
+    let rec match_entities (entities: JsonParser.Message.Entity[]) (raw_body : string)= 
+        match entities with
+        |[||] -> ()
+        |_ as arr -> match_entity(arr.[0])( raw_body); match_entities(Array.sub arr 1 (arr.Length-1))(raw_body)
+
+    match_entities  parsed.Message.Entities body
+
+    Console.WriteLine ("done with match 1. body = "+body)
 
     match body with
       | msg when msg = PREFIX + "hi" -> 

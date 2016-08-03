@@ -3,6 +3,7 @@
 module Telegram =
   open FSharp.Data
   open FSharp.Data.JsonExtensions
+  open System
 
   let JSONEXN = "An issue was encountered parsing the JSON object."
   let HTTPEXN = "An issue was encountered contacting the server."
@@ -105,17 +106,18 @@ module Telegram =
       | None     -> 0
 
   //  sendMessage :: string -> int -> string -> unit
-  let sendMessage (token: string) (cid: int) (body: string) =
+  let sendMessage (token: string) (chatId: int) (body: string) =
     let url  = getEndpoint token "sendMessage"
-    let scid = sprintf "%d" cid
+    let stringChatId = sprintf "%d" chatId
     try
-      Http.RequestString (url, query=["chat_id", scid; "text", body]) |> ignore 
+      Http.RequestString (url, query=["chat_id", stringChatId; "text", body]) |> ignore 
     with
       | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
       | _                          -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
 
   //  getNewId :: JsonValue [] -> option int
   let getNewId (msgs: JsonValue []) =
+  //  Console.WriteLine (sprintf "getNewId() msgs.count=%i" msgs.Length)
     match Seq.isEmpty msgs with
       | true -> None
       | false -> msgs |> Seq.map update_id |> Seq.last |> succ |> Some
