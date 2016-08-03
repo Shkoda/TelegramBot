@@ -24,32 +24,27 @@ module Main =
     let parsed = JsonParser.Message.Parse(message.ToString())
     Console.WriteLine("from "+parsed.Message.From.Username)
 
+    let reply message = Telegram.sendMessage TOKEN cid message
 
-    let match_entity (e: JsonParser.Message.Entity) (raw_body : string)=
-        let value = raw_body.Substring(e.Offset, e.Length)
+    let match_entity (e: JsonParser.Message.Entity) =
+        let value = parsed.Message.Text.Substring(e.Offset, e.Length)
         match e.Type with
-        |"mention" ->  Telegram.sendMessage TOKEN cid ("mention "+value)
-        |"bot_command" -> Telegram.sendMessage TOKEN cid ("bot_command "+value)
-        |"hashtag" -> Telegram.sendMessage TOKEN cid ("hashtag "+value)
+        |"mention" ->  reply ("you've mentioned "+ value)
+        |"bot_command" -> 
+            let command = value
+            match command with
+             |"/hi"|"/hello" -> reply ("Nice to meet you, " + parsed.Message.From.Username)
+             |_ -> reply (sprintf "I don't know %s command, %s" command parsed.Message.From.Username)
+        |"hashtag" -> reply ("you've used hashtag "+value)
         |_ -> ignore()
 
-    let rec match_entities (entities: JsonParser.Message.Entity[]) (raw_body : string)= 
+    let rec match_entities (entities: JsonParser.Message.Entity[]) = 
+
         match entities with
         |[||] -> ()
-        |_ as arr -> match_entity(arr.[0])( raw_body); match_entities(Array.sub arr 1 (arr.Length-1))(raw_body)
+        |_ as arr -> match_entity(arr.[0]); match_entities(Array.sub arr 1 (arr.Length-1))
 
-    match_entities  parsed.Message.Entities body
-
-    Console.WriteLine ("done with match 1. body = "+body)
-
-    match body with
-      | msg when msg = PREFIX + "hi" -> 
-          Telegram.sendMessage TOKEN cid "hi"
-      | msg when msg = PREFIX + "me" ->
-          Telegram.sendMessage TOKEN cid (sprintf "hi %d" <| Telegram.from_id message)
-      | msg when msg = PREFIX + "rand" ->
-          Telegram.sendMessage TOKEN cid (sprintf "%O" <| rand ())
-      | _ -> ignore ()
+    match_entities parsed.Message.Entities 
 
   // --
 
