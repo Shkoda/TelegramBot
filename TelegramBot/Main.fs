@@ -9,10 +9,10 @@ module Main =
 
   let sleep (x: int) = System.Threading.Thread.Sleep x
 
-  let handle (update : JsonParser.Update.Result) =
+  let handle (update : Json.Update.Result) =
     let reply text = Telegram.sendMessage TOKEN  update.Message.Chat.Id text
 
-    let match_entity (e: JsonParser.Update.Entity) =
+    let match_entity (e: Json.Update.Entity) =
         let sender =  update.Message.From.FirstName
         let value = update.Message.Text.Substring(e.Offset, e.Length)
         match e.Type with
@@ -24,20 +24,20 @@ module Main =
              |_ -> reply (sprintf "I don't know %s command, %s" command sender)
         |"hashtag" -> reply ("you've used hashtag " + value)
         |_ -> ignore()
-
-    for e in update.Message.Entities do match_entity(e)
+    
+    Seq.iter (fun e -> match_entity e) update.Message.Entities
 
   let rec mainLoop (offset: int) =
     let update = Telegram.getUpdates TOKEN offset
-    let newOffset = Telegram.getNewId  update
+    let offset = Telegram.getNewId  update
 
     sleep 100 
 
     match update with
-    | Some upd-> Seq.iter (fun res -> handle res) upd.Result
+    | Some upd -> Seq.iter (fun res -> handle res) upd.Result
     | None -> ignore()
      
-    mainLoop newOffset
+    mainLoop offset
 
   [<EntryPoint>]
   let main args =

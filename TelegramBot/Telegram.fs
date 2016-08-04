@@ -6,7 +6,7 @@ module Telegram =
   let JSONEXN = "An issue was encountered parsing the JSON object."
   let HTTPEXN = "An issue was encountered contacting the server."
 
-  let succ x = x + 1
+  let next x = x + 1
 
   let endpoint token path = "https://api.telegram.org/bot" + token + "/" + path
   let updateEndpoint token =  endpoint token "getUpdates"
@@ -15,19 +15,17 @@ module Telegram =
   let getUpdates token offset =
     try 
       let url = updateEndpoint token 
-      Http.RequestString (url, query=["offset", offset.ToString()]) |> JsonParser.Update.Parse |> Some
+      Http.RequestString (url, query=["offset", offset.ToString()]) |> Json.Update.Parse |> Some
     with
       | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__ ; None
       | _                          -> printfn "%s (%s)" JSONEXN __LINE__ ; None    
  
-  let getNewId (responce: JsonParser.Update.Root option) = 
-       let update_id (result:JsonParser.Update.Result) =  result.UpdateId
+  let getNewId (responce: Json.Update.Root option) = 
+       let update_id (result:Json.Update.Result) =  result.UpdateId
        match responce with
-       |Some r -> 
-            match Seq.isEmpty r.Result with
-            | true -> 0
-            | false -> r.Result |> Seq.map update_id |> Seq.last |> succ 
-        |None -> 0
+       |Some r when Seq.isEmpty r.Result = false    
+            -> r.Result |> Seq.map update_id |> Seq.last |> next 
+       |_ -> 0
         
   let sendMessage token chatId body =
     let url  = sendMessageEndpoint token 
