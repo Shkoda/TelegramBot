@@ -6,57 +6,42 @@ module Main =
 
   let TOKEN  = "231953668:AAHUQ8HEQr8Scnl_ViDZ6dWtH9JXDeMy5hw"
   let PREFIX = "/"
-
-  let (<@>) = Telegram.(<@>)
   let (>>=) = Telegram.(>>=)
   let sleep (x: int) = System.Threading.Thread.Sleep x
 
-  let rand () = 
-    let rng = new System.Random ()
-    rng.Next ()
+  let handleJson (message : JsonParser.Update.Result) =
 
-  //  handler :: JsonValue -> unit
-  let handler (message: JsonValue) =
-    let cid = Telegram.chat_id message
-    let body = Telegram.message_text message
-    Console.WriteLine( message.ToString())
+    let reply text = Telegram.sendMessage TOKEN  message.Message.Chat.Id text
 
-    let parsed = JsonParser.Message.Parse(message.ToString())
-    Console.WriteLine("from "+parsed.Message.From.Username)
-
-    let reply message = Telegram.sendMessage TOKEN cid message
-
-    let match_entity (e: JsonParser.Message.Entity) =
-        let value = parsed.Message.Text.Substring(e.Offset, e.Length)
+    let match_entity (e: JsonParser.Update.Entity) =
+        let value = message.Message.Text.Substring(e.Offset, e.Length)
         match e.Type with
         |"mention" ->  reply ("you've mentioned "+ value)
         |"bot_command" -> 
             let command = value
             match command with
-             |"/hi"|"/hello" -> reply ("Nice to meet you, " + parsed.Message.From.Username)
-             |_ -> reply (sprintf "I don't know %s command, %s" command parsed.Message.From.Username)
+             |"/hi"|"/hello" -> reply ("Nice to meet you, " + message.Message.From.FirstName)
+             |_ -> reply (sprintf "I don't know %s command, %s" command message.Message.From.FirstName)
         |"hashtag" -> reply ("you've used hashtag "+value)
         |_ -> ignore()
 
-    let rec match_entities (entities: JsonParser.Message.Entity[]) = 
-
+    let rec match_entities (entities: JsonParser.Update.Entity[]) = 
         match entities with
         |[||] -> ()
         |_ as arr -> match_entity(arr.[0]); match_entities(Array.sub arr 1 (arr.Length-1))
 
-    match_entities parsed.Message.Entities 
-
-  // --
+    match_entities message.Message.Entities
 
   let rec mainLoop (offset: int) =
-    let newUpdate = Telegram.getUpdatesO TOKEN offset 
-    let newOffset = (newUpdate >>= Telegram.result >>= Telegram.getNewId)
+    let newUpdate = Telegram.getUpdatesJson0 TOKEN offset
+    let newOffset = Telegram.getNewId  newUpdate
 
     sleep 100 
 
-    match (newUpdate >>= Telegram.result) with
-      | Some results -> Seq.iter (fun res -> handler res) results
-      | None         -> ignore ()
+    match newUpdate with
+    | Some upd-> Seq.iter (fun res -> handleJson res) upd.Result
+    | None -> ignore()
+     
 
     match newOffset with
       | Some nO -> mainLoop nO
@@ -64,9 +49,14 @@ module Main =
 
   [<EntryPoint>]
   let main args =
-    let initial = Telegram.getUpdates TOKEN 
 
-    match (initial >>= Telegram.result >>= Telegram.getNewId) with
-      | Some x -> mainLoop x 
-      | None   -> mainLoop 0 
+    let initial = Telegram.getUpdatesJson TOKEN 
+    let nextId = Telegram.getNewId initial
+    match initial with
+    |Some updates ->       
+        match nextId with
+        |Some i -> mainLoop i
+        |None -> mainLoop 0
+    |None -> mainLoop 0
+
     0

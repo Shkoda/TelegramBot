@@ -1,0 +1,116 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "update_id": 736904270,
+      "message": {
+        "message_id": 150,
+        "from": {
+          "id": 168659798,
+          "first_name": "Shkoda",
+          "last_name": "Aleceya",
+          "username": "freilin"
+        },
+        "chat": {
+          "id": 168659798,
+          "first_name": "Shkoda",
+          "last_name": "Aleceya",
+          "username": "freilin",
+          "type": "private"
+        },
+        "date": 1470334775,
+        "text": "Shkoda Aleceya, [04.08.16 20:59]\n/me /hi @smbd2122 /testcmd *aa* _bb_ ~cc~ #hashtagtwit some text ?? dsa ?? ?? /rand",
+        "entities": [
+          {
+            "type": "bot_command",
+            "offset": 33,
+            "length": 3
+          },
+          {
+            "type": "bot_command",
+            "offset": 37,
+            "length": 3
+          },
+          {
+            "type": "mention",
+            "offset": 41,
+            "length": 9
+          },
+          {
+            "type": "bot_command",
+            "offset": 51,
+            "length": 8
+          },
+          {
+            "type": "hashtag",
+            "offset": 75,
+            "length": 12
+          },
+          {
+            "type": "bot_command",
+            "offset": 111,
+            "length": 5
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 736904271,
+      "message": {
+        "message_id": 151,
+        "from": {
+          "id": 168659798,
+          "first_name": "Shkoda",
+          "last_name": "Aleceya",
+          "username": "freilin"
+        },
+        "chat": {
+          "id": 168659798,
+          "first_name": "Shkoda",
+          "last_name": "Aleceya",
+          "username": "freilin",
+          "type": "private"
+        },
+        "date": 1470334779,
+        "text": "Shkoda Aleceya, [04.08.16 20:59]\n/me /hi @smbd2122 /testcmd *aa* _bb_ ~cc~ #hashtagtwit some text ?? dsa ?? ?? /rand\n\nCelesta, [04.08.16 20:59]\nI don't know /rand command, freilin",
+        "entities": [
+          {
+            "type": "bot_command",
+            "offset": 33,
+            "length": 3
+          },
+          {
+            "type": "bot_command",
+            "offset": 37,
+            "length": 3
+          },
+          {
+            "type": "mention",
+            "offset": 41,
+            "length": 9
+          },
+          {
+            "type": "bot_command",
+            "offset": 51,
+            "length": 8
+          },
+          {
+            "type": "hashtag",
+            "offset": 75,
+            "length": 12
+          },
+          {
+            "type": "bot_command",
+            "offset": 111,
+            "length": 5
+          },
+          {
+            "type": "bot_command",
+            "offset": 157,
+            "length": 5
+          }
+        ]
+      }
+    }
+  ]
+}
