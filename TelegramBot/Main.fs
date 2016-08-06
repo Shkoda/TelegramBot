@@ -28,8 +28,7 @@ module Main =
     Array.iter (fun e -> match_entity e) update.Message.Entities
 
   let rec mainLoop (offset: int) =
-    let update = Telegram.getUpdates TOKEN offset
-    let offset = Telegram.getNewId  update
+    let (update, nextOffset) = Telegram.getUpdates TOKEN offset
 
     sleep 100 
 
@@ -37,7 +36,7 @@ module Main =
     | Some upd -> Array.iter (fun res -> handle res) upd.Result
     | None -> ignore()
      
-    mainLoop offset
+    mainLoop nextOffset
 
   [<EntryPoint>]
   let main args =

@@ -15,19 +15,19 @@ module Telegram =
   let getUpdates token offset =
     try 
       let url = updateEndpoint token 
-      Http.RequestString (url, query=["offset", offset.ToString()]) |> Json.Update.Parse |> Some
+      let response = Http.RequestString (url, query=["offset", offset.ToString()]) |> Json.Update.Parse 
+      
+      let offset = match response.Result with
+                    | r when Seq.isEmpty r = false    
+                        -> r |> Array.map (fun elem -> elem.UpdateId) |> Array.last |> increment 
+                    | _ -> 0
+
+      response |> Some, offset
     with
-      | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__ ; None
-      | _                          -> printfn "%s (%s)" JSONEXN __LINE__ ; None    
+      | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__ ; None, 0
+      | _                          -> printfn "%s (%s)" JSONEXN __LINE__ ; None, 0    
  
-  let getNewId (responce: Json.Update.Root option) = 
- 
-       let updateId (result:Json.Update.Result) =  result.UpdateId
-       match responce with
-       |Some r when Seq.isEmpty r.Result = false    
-            -> r.Result |> Array.map updateId |> Array.last |> increment 
-       |_ -> 0
-        
+         
   let sendMessage token chatId body =
     let url  = sendMessageEndpoint token 
     try
