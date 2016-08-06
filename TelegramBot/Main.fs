@@ -25,7 +25,7 @@ module Main =
         |"hashtag" -> reply ("you've used hashtag " + value)
         |_ -> ignore()
     
-    Seq.iter (fun e -> match_entity e) update.Message.Entities
+    Array.iter (fun e -> match_entity e) update.Message.Entities
 
   let rec mainLoop (offset: int) =
     let update = Telegram.getUpdates TOKEN offset
@@ -34,7 +34,7 @@ module Main =
     sleep 100 
 
     match update with
-    | Some upd -> Seq.iter (fun res -> handle res) upd.Result
+    | Some upd -> Array.iter (fun res -> handle res) upd.Result
     | None -> ignore()
      
     mainLoop offset
