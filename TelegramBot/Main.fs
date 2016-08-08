@@ -3,13 +3,10 @@
 module Main =
   open FSharp.Data
   open System
+  open System.Threading
 
   let TOKEN  = "231953668:AAHUQ8HEQr8Scnl_ViDZ6dWtH9JXDeMy5hw"
   let PREFIX = "/"
-
-  let sleep (x: int) = System.Threading.Thread.Sleep x
-
-
 
   let handle (update : Json.Update.Result) =
     let reply text = Telegram.sendMessage TOKEN  update.Message.Chat.Id text
@@ -32,25 +29,9 @@ module Main =
   let handleUpdates (updates: Json.Update.Result[]) = 
      Array.iter (fun res -> handle res) updates
 
-  let rec mainLoop (offset: int) =
-    let (update, nextOffset) = Telegram.getUpdates TOKEN offset
-
-    sleep 100 
-
-    match update with
-    | Some upd -> Array.iter (fun res -> handle res) upd.Result
-    | None -> ignore()
-     
-    mainLoop nextOffset
-
-  let anotherMain = 
-    Telegram.UpdateReceived.Add(handleUpdates)
-    Async.Start (Telegram.getUpdatesBackground TOKEN 0)
-
   [<EntryPoint>]
   let main args =
-  //  mainLoop 0
-    anotherMain
-    Console.WriteLine "finished"
+    Telegram.UpdateSubscribers.Add(handleUpdates)
+    Async.Start (Telegram.getUpdatesBackground TOKEN 0)
     Console.ReadLine()
     0
