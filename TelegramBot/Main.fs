@@ -9,6 +9,8 @@ module Main =
 
   let sleep (x: int) = System.Threading.Thread.Sleep x
 
+
+
   let handle (update : Json.Update.Result) =
     let reply text = Telegram.sendMessage TOKEN  update.Message.Chat.Id text
 
@@ -27,6 +29,9 @@ module Main =
     
     Array.iter (fun e -> match_entity e) update.Message.Entities
 
+  let handleUpdates (updates: Json.Update.Result[]) = 
+     Array.iter (fun res -> handle res) updates
+
   let rec mainLoop (offset: int) =
     let (update, nextOffset) = Telegram.getUpdates TOKEN offset
 
@@ -38,7 +43,14 @@ module Main =
      
     mainLoop nextOffset
 
+  let anotherMain = 
+    Telegram.UpdateReceived.Add(handleUpdates)
+    Async.Start (Telegram.getUpdatesBackground TOKEN 0)
+
   [<EntryPoint>]
   let main args =
-    mainLoop 0
+  //  mainLoop 0
+    anotherMain
+    Console.WriteLine "finished"
+    Console.ReadLine()
     0
