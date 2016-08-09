@@ -58,6 +58,8 @@
     <None Include="App.config" />
     <Content Include="packages.config" />
     <Compile Include="Json.fs" />
+    <Compile Include="HttpServer.fs" />
+    <Compile Include="BitBucket.fs" />
     <Compile Include="Telegram.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>
