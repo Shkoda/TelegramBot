@@ -10,7 +10,7 @@ module Main =
 
   let handle (update : Json.Update.Result) =
     let reply text = Telegram.sendMessage TOKEN  update.Message.Chat.Id text
-
+   
     let match_entity (e: Json.Update.Entity) =
         let sender =  update.Message.From.FirstName
         let value = update.Message.Text.Substring(e.Offset, e.Length)
@@ -23,7 +23,8 @@ module Main =
              |_ -> reply (sprintf "I don't know %s command, %s" command sender)
         |"hashtag" -> reply ("you've used hashtag " + value)
         |_ -> ignore()
-    
+
+    Console.WriteLine (sprintf "from %s: %s" update.Message.Chat.Username update.Message.Text)
     Array.iter (fun e -> match_entity e) update.Message.Entities
 
   let handleUpdates (updates: Json.Update.Result[]) = 
