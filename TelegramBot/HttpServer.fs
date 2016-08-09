@@ -4,8 +4,7 @@ module HttpServer =
     open System.Net
     open System.Text
     open System.IO
- 
-    let siteRoot = @"G:\mySite\"
+
     let host = "http://localhost:8080/"
  
     let listener (handler:(HttpListenerRequest->HttpListenerResponse->Async<unit>)) =
@@ -20,18 +19,14 @@ module HttpServer =
         } |> Async.Start
  
     let output (req:HttpListenerRequest) =
-        let file = Path.Combine(siteRoot,
-                                Uri(host).MakeRelativeUri(req.Url).OriginalString)
-        printfn "Requested : '%s'" file
-        if (File.Exists file)
-            then File.ReadAllText(file)
-            else "File does not exist!"
+     "ololo" 
+
     let startIt = fun () ->
         listener (fun req resp ->
             async {
-            
-                let txt = Encoding.ASCII.GetBytes(output req)
                 Console.WriteLine (sprintf "request from %s" req.Url.AbsoluteUri)
+                let txt = Encoding.ASCII.GetBytes(output req)
+            
                 resp.ContentType <- "text/html"
                 resp.OutputStream.Write(txt, 0, txt.Length)
                 resp.OutputStream.Close()
