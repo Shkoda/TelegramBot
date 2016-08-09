@@ -32,7 +32,9 @@ module Main =
 
   [<EntryPoint>]
   let main args =
+    HttpServer.startIt()
     Telegram.UpdateSubscribers.Add(handleUpdates)
     Async.Start (Telegram.getUpdatesBackground TOKEN 0)
+
     Console.ReadLine()
     0
