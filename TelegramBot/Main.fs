@@ -13,6 +13,7 @@ module Main =
     let reply text = Telegram.sendMessage TOKEN  update.Message.Chat.Id text
     let sendCommits (commits:BitBucket.ShortCommitInfo[]) = 
        let s = commits |> Array.map (fun c -> sprintf "%s" c.message ) |> String.concat ("\n")
+       reply "[JIRA](https://reddotsquare.atlassian.net/browse/NG-12057)"
        reply s
    
     let match_entity (e: Json.Update.Entity) =
@@ -24,7 +25,7 @@ module Main =
             let command = value
             match command with
              |"/hi"|"/hello" -> reply ("Nice to meet you, " + sender)
-             |"/git" -> sendCommits (BitBucket.getCommitList "email" "pass")
+             |"/git" -> sendCommits (BitBucket.getCommitList "ohl@ciklum.com" "ct798wLas9")
              |_ -> reply (sprintf "I don't know %s command, %s" command sender)
         |"hashtag" -> reply ("you've used hashtag " + value)
         |_ -> ignore()

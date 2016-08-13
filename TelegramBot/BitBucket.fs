@@ -35,18 +35,19 @@ module BitBucket =
     let isAuthor (email:string)(commit:Json.CommitsResponse.Value) =
         commit.Author.Raw.Contains email
    
-    type ShortCommitInfo = {message:string; date: DateTime}
+    type ShortCommitInfo = {message:string; date: DateTime; }
 
     let commitShortInfo (commit:Json.CommitsResponse.Value) = 
-        {message = commit.Message; date = commit.Date}     
+        {message = commit.Message; date = commit.Date;  }     
 
         
 
     let getCommitList email pass = 
         let authHeader = BasicAuth email pass
         let response = Http.RequestString (cuttlefishUrl,  headers = ["Authorization", authHeader])
-        printf " %s" authHeader 
+        printf " %s\n" authHeader  
         let parsed = Json.CommitsResponse.Parse response 
+        printf " %s\n" (parsed.Next) 
         parsed.Values
             |> Array.filter (fun c -> isAuthor email c) 
             |> Array.map commitShortInfo

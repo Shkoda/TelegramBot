@@ -6,7 +6,7 @@ module Telegram =
   open System.Threading
 
   let JSONEXN = "An issue was encountered parsing the JSON object."
-  let HTTPEXN = "An issue was encountered contacting the server."
+  let HTTPEXN = "An issue was encountered contacting TELEGRAM server."
 
   let sleep (x: int) = System.Threading.Thread.Sleep x
 
@@ -44,7 +44,7 @@ module Telegram =
   let sendMessage token chatId body =
     let url  = sendMessageEndpoint token 
     try
-      Http.RequestString (url, query=["chat_id", chatId.ToString(); "text", body]) |> ignore 
+      Http.RequestString (url, query=["chat_id", chatId.ToString(); "text", body; "parse_mode", "Markdown"]) |> ignore 
     with
       | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
       | _                          -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
