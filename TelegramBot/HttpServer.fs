@@ -8,6 +8,7 @@ module HttpServer =
     let host = "http://localhost:8080/"
  
     let listener (handler:(HttpListenerRequest->HttpListenerResponse->Async<unit>)) =
+        Console.WriteLine (sprintf "start listening %s" host)
         let hl = new HttpListener()
         hl.Prefixes.Add host
         hl.Start()

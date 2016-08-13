@@ -8,8 +8,12 @@ module Main =
   let TOKEN  = "231953668:AAHUQ8HEQr8Scnl_ViDZ6dWtH9JXDeMy5hw"
   let PREFIX = "/"
 
+ 
   let handle (update : Json.Update.Result) =
     let reply text = Telegram.sendMessage TOKEN  update.Message.Chat.Id text
+    let sendCommits (commits:BitBucket.ShortCommitInfo[]) = 
+       let s = commits |> Array.map (fun c -> sprintf "%s" c.message ) |> String.concat ("\n")
+       reply s
    
     let match_entity (e: Json.Update.Entity) =
         let sender =  update.Message.From.FirstName
@@ -20,6 +24,7 @@ module Main =
             let command = value
             match command with
              |"/hi"|"/hello" -> reply ("Nice to meet you, " + sender)
+             |"/git" -> sendCommits (BitBucket.getCommitList "email" "pass")
              |_ -> reply (sprintf "I don't know %s command, %s" command sender)
         |"hashtag" -> reply ("you've used hashtag " + value)
         |_ -> ignore()
@@ -32,9 +37,9 @@ module Main =
 
   [<EntryPoint>]
   let main args =
-    HttpServer.startIt()
+  //  HttpServer.startIt()
     Telegram.UpdateSubscribers.Add(handleUpdates)
     Async.Start (Telegram.getUpdatesBackground TOKEN 0)
-
-    Console.ReadLine()
+    while true do
+        Console.ReadLine()
     0
