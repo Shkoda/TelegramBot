@@ -12,8 +12,10 @@ module Main =
   let handle (update : Json.Update.Result) =
     let reply text = Telegram.sendMessage TOKEN  update.Message.Chat.Id text
     let sendCommits (commits:BitBucket.ShortCommitInfo[]) = 
-       let s = commits |> Array.map (fun c -> sprintf "%s" c.message ) |> String.concat ("\n")
-       reply "[JIRA](https://reddotsquare.atlassian.net/browse/NG-12057)"
+       let s = commits 
+                |> Array.map (fun c -> sprintf "%s" c.message ) 
+                |> Array.map (fun m -> TelegramMarkdown.markJiraTasksInCommitMessage(m))
+                |> String.concat ("\n")
        reply s
    
     let match_entity (e: Json.Update.Entity) =
