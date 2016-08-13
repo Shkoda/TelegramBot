@@ -5,7 +5,7 @@ module BitBucket =
     open System.Text
     open System.Text.RegularExpressions
 
-    let cuttlefishCommitsUrl = "https://api.bitbucket.org/2.0/repositories/reddotsquaresolutions/unity-cuttlefish/commits"
+    let cuttlefishCommitsUrl = "https://api.bitbucket.org/2.0/repositories/reddotsquaresolutions/unity-cuttlefish/commits?page="
     //[Nn][Gg]-\d{1,}    pattern NG-****
     let taskTextPattern = Regex @"[Nn][Gg]-\d{1,}"
     
@@ -27,10 +27,14 @@ module BitBucket =
         {message = commit.Message; date = commit.Date; link = commit.Parents.[0].Links.Html.Href}     
 
     let commitDate (commit:ShortCommitInfo) = 
-        commit.date.Date   
+        commit.date.Date  
+     
+    let getCommitsFromPage page email pass=
+         Http.RequestString (sprintf "%s%i"cuttlefishCommitsUrl page,  headers = ["Authorization", basicAuthHeaderValue email pass])
+        
 
     let getCommitList email pass = 
-        let response = Http.RequestString (cuttlefishCommitsUrl,  headers = ["Authorization", basicAuthHeaderValue email pass])
+        let response = getCommitsFromPage 1 email pass
         let parsed = Json.CommitsResponse.Parse response 
         printf " %s\n" (parsed.Next) 
         parsed.Values
@@ -40,3 +44,5 @@ module BitBucket =
         
     let groupByDate (commits:ShortCommitInfo[]) = 
         commits |> Array.groupBy commitDate
+    
+

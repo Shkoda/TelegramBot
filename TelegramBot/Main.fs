@@ -12,12 +12,20 @@ module Main =
   let handle (update : Json.Update.Result) =
     let reply text = Telegram.sendMessage TOKEN  update.Message.Chat.Id text
     let sendCommits (commits:BitBucket.ShortCommitInfo[]) = 
-       let s = commits 
+       let stringify (commits : BitBucket.ShortCommitInfo[]) = 
+        commits
                 |> Array.map (fun c -> sprintf "%s" c.message ) 
                 |> Array.map (fun m -> TelegramMarkdown.markJiraTasksInCommitMessage(m))
-                |> String.concat ("\n")
-       reply s
-   
+                |> String.concat ("")
+
+       let formattedMessage =  
+        BitBucket.groupByDate commits 
+           |> Array.map (fun (d, a) -> d, stringify(a))
+           |> Array.map (fun (d, s) -> sprintf "*%s*\n%s" (d.ToLongDateString()) s)
+           |> String.concat ("\n")
+
+       reply formattedMessage
+  
     let match_entity (e: Json.Update.Entity) =
         let sender =  update.Message.From.FirstName
         let value = update.Message.Text.Substring(e.Offset, e.Length)
