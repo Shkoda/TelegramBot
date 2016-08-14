@@ -2,6 +2,7 @@
 module CommandHandler = 
     open System
 
+
     let handle (update : Json.Update.Result) =
         let reply text = Telegram.sendMessage update.Message.Chat.Id text
   
@@ -15,6 +16,7 @@ module CommandHandler =
                 match command with
                  |"/hi"|"/hello" -> reply ("Nice to meet you, " + sender)
                  |"/git" -> reply (BitBucket.getCommitStatistics (update.Message.From.Username))
+                 |"/k" -> Telegram.keyboard update.Message.Chat.Id "i'm trying to show keyboard"
                  |_ -> reply (sprintf "I don't know %s command, %s" command sender)
             |"hashtag" -> reply ("you've used hashtag " + value)
             |_ -> ignore()
