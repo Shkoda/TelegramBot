@@ -1,6 +1,6 @@
 ﻿namespace Shkoda.Telegram.Bot
 module TelegramMarkdown =
-
+    open System
     open System.Text.RegularExpressions
 
     let taskPattern = @"\[?[Nn][Gg]-\d{1,}]?"
@@ -16,3 +16,21 @@ module TelegramMarkdown =
          Regex.Replace(message, taskPattern,
                 (fun (x : Match) -> namedTaskLink (x)),
                 RegexOptions.IgnoreCase)
+
+    let commitsToString (commits : Json.CommitsResponse.Value[]) = 
+        commits
+                |> Array.map (fun c -> sprintf "%s" c.Message ) 
+                |> Array.map (fun m -> markJiraTasksInCommitMessage(m))
+                |> String.concat ("")         
+
+    let commitsByDateText (commits : Json.CommitsResponse.Value[]) = 
+        let groupByDate (commits: Json.CommitsResponse.Value[]) = 
+            commits |> Array.groupBy (fun c -> c.Date.Date)
+
+        let datedCommitsToString ((date: DateTime),(commits: Json.CommitsResponse.Value[])) =                 
+            sprintf "*%s*\n%s" (date.ToLongDateString()) (commitsToString(commits))
+
+        groupByDate commits 
+           |> Array.map datedCommitsToString
+           |> String.concat ("\n")
+

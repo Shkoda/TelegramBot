@@ -63,6 +63,7 @@
     <Compile Include="HttpServer.fs" />
     <Compile Include="BitBucket.fs" />
     <Compile Include="Telegram.fs" />
+    <Compile Include="CommandHandler.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>
   <ItemGroup>
