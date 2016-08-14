@@ -17,13 +17,10 @@ module BitBucket =
         try
             Http.RequestString (url,  headers = ["Authorization", basicAuthHeaderValue email password]) |> Some
         with 
-        | ex -> printf "AuthorizedRequest exception: %s" ex.Message; None
-
-   
+        | ex -> printf "AuthorizedRequest exception: %s" ex.Message; None 
 
     let getCommitsFromPage page email pass=
          let url = sprintf "%s%i"cuttlefishCommitsUrl page
-         //Http.RequestString (url,  headers = ["Authorization", basicAuthHeaderValue email pass])
          authorizedRequest url email pass
         
     let getCommitList email pass = 
@@ -56,7 +53,6 @@ module BitBucket =
         else "Invalid credentials"      
 
     let getCommitStatistics telegramUsername = 
-        let storedConfig = UserConfigProvider.getUser telegramUsername
-        match storedConfig with
-            | Some config -> getUserCommits config
-            | None -> "Credentials not found"
+        let credentials = UserConfigProvider.getUser telegramUsername
+        getUserCommits credentials
+
