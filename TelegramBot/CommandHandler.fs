@@ -2,10 +2,8 @@
 module CommandHandler = 
     open System
 
-    let TOKEN  = "231953668:AAHUQ8HEQr8Scnl_ViDZ6dWtH9JXDeMy5hw"
-
     let handle (update : Json.Update.Result) =
-        let reply text = Telegram.sendMessage TOKEN  update.Message.Chat.Id text
+        let reply text = Telegram.sendMessage update.Message.Chat.Id text
   
         let match_entity (e: Json.Update.Entity) =
             let sender =  update.Message.From.FirstName

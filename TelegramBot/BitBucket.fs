@@ -37,6 +37,3 @@ module BitBucket =
         match storedConfig with
             | Some config -> getUserCommits config
             | None -> "unknown user"
-
-    
-

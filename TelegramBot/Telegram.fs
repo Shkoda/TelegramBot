@@ -4,6 +4,7 @@ module Telegram =
   open FSharp.Data
   open System
   open System.Threading
+  let TOKEN  = "231953668:AAHUQ8HEQr8Scnl_ViDZ6dWtH9JXDeMy5hw"
 
   let JSONEXN = "An issue was encountered parsing the JSON object."
   let HTTPEXN = "An issue was encountered contacting TELEGRAM server."
@@ -19,33 +20,37 @@ module Telegram =
   let updateEndpoint token =  endpoint token "getUpdates"
   let sendMessageEndpoint token =  endpoint token "sendMessage"
 
-  let rec getUpdatesBackground token offset =
+  let getUpdatesBackground = fun() ->
+      let rec getUpdatesBackground token offset =
 
-    async {
-        try 
-            let url = updateEndpoint token 
-            let! responseString = Http.AsyncRequestString(url, query=["offset", offset.ToString()])
-            let update =  responseString |> Json.Update.Parse 
-            updateReceived.Trigger update.Result
+        async {
+            try 
+                let url = updateEndpoint token 
+                let! responseString = Http.AsyncRequestString(url, query=["offset", offset.ToString()])
+                let update =  responseString |> Json.Update.Parse 
+                updateReceived.Trigger update.Result
             
       
-            let nextOffset = match update.Result with
-                             | r when Seq.isEmpty r = false    
-                                -> r |> Array.map (fun elem -> elem.UpdateId) |> Array.last |> increment 
-                             | _ -> 0
-            sleep 100 
+                let nextOffset = match update.Result with
+                                 | r when Seq.isEmpty r = false    
+                                    -> r |> Array.map (fun elem -> elem.UpdateId) |> Array.last |> increment 
+                                 | _ -> 0
+                sleep 100 
 
-            do! getUpdatesBackground token nextOffset          
+                do! getUpdatesBackground token nextOffset          
+            with
+            | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__;  Async.Start (getUpdatesBackground token 0)  
+            | _                          -> printfn "%s (%s)" JSONEXN __LINE__; Async.Start (getUpdatesBackground token 0)  
+        }   
+      getUpdatesBackground TOKEN 0 
+  
+  let sendMessage chatId text =        
+      let sendMessage token chatId body =
+        let url  = sendMessageEndpoint token 
+        try
+          Http.RequestString (url, query=["chat_id", chatId.ToString(); "text", body; "parse_mode", "Markdown"]) |> ignore 
         with
-        | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__;  Async.Start (getUpdatesBackground token 0)  
-        | _                          -> printfn "%s (%s)" JSONEXN __LINE__; Async.Start (getUpdatesBackground token 0)  
-    }   
-         
-  let sendMessage token chatId body =
-    let url  = sendMessageEndpoint token 
-    try
-      Http.RequestString (url, query=["chat_id", chatId.ToString(); "text", body; "parse_mode", "Markdown"]) |> ignore 
-    with
-      | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
-      | _                          -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
+          | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
+          | _                          -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
+      sendMessage TOKEN chatId text
 

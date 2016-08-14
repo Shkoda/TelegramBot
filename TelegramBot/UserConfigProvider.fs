@@ -1,7 +1,6 @@
 ﻿namespace Shkoda.Telegram.Bot
 module UserConfigProvider = 
     open System.IO
-    open FSharp.Data
 
     let credentialsFolder = "../../../user_data/"
 

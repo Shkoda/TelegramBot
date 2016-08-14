@@ -7,7 +7,6 @@ module TelegramMarkdown =
     let regex = Regex taskPattern
     let jiraTaskRootUrl = "https://reddotsquare.atlassian.net/browse/"
 
-
     let markJiraTasksInCommitMessage (message:string) = 
          let namedTaskLink (m : Match) = 
             let taskName = m.Value.Replace("[", "").Replace("]", "")

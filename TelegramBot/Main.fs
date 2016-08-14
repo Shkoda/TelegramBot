@@ -4,9 +4,9 @@ module Main =
   open System
 
   [<EntryPoint>]
-  let main args =
+  let main args = 
     Telegram.UpdateSubscribers.Add(CommandHandler.handleUpdates)
-    Async.Start (Telegram.getUpdatesBackground CommandHandler.TOKEN 0)
+    Async.Start (Telegram.getUpdatesBackground())
 
     while true do Console.ReadLine()
     0

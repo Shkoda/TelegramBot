@@ -32,5 +32,3 @@ module HttpServer =
                 resp.OutputStream.Write(txt, 0, txt.Length)
                 resp.OutputStream.Close()
             })
-
-
