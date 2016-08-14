@@ -6,9 +6,7 @@ module BitBucket =
     open System.Text.RegularExpressions
 
     let cuttlefishCommitsUrl = "https://api.bitbucket.org/2.0/repositories/reddotsquaresolutions/unity-cuttlefish/commits?page="
-    //[Nn][Gg]-\d{1,}    pattern NG-****
-    let taskTextPattern = Regex @"[Nn][Gg]-\d{1,}"
-    
+   
     let basicAuthHeaderValue (username:string) (password:string) = 
         let base64Encode (s:string) = 
             let bytes = Encoding.UTF8.GetBytes(s)
@@ -30,9 +28,9 @@ module BitBucket =
         commit.date.Date  
      
     let getCommitsFromPage page email pass=
-         Http.RequestString (sprintf "%s%i"cuttlefishCommitsUrl page,  headers = ["Authorization", basicAuthHeaderValue email pass])
+         let url = sprintf "%s%i"cuttlefishCommitsUrl page
+         Http.RequestString (url,  headers = ["Authorization", basicAuthHeaderValue email pass])
         
-
     let getCommitList email pass = 
         let response = getCommitsFromPage 1 email pass
         let parsed = Json.CommitsResponse.Parse response 
@@ -44,5 +42,31 @@ module BitBucket =
         
     let groupByDate (commits:ShortCommitInfo[]) = 
         commits |> Array.groupBy commitDate
+    
+   
+    let stringify (commits : ShortCommitInfo[]) = 
+        commits
+                |> Array.map (fun c -> sprintf "%s" c.message ) 
+                |> Array.map (fun m -> TelegramMarkdown.markJiraTasksInCommitMessage(m))
+                |> String.concat ("")
+
+    let formattedMessage (commits : ShortCommitInfo[]) =  
+        groupByDate commits 
+           |> Array.map (fun (d, a) -> d, stringify(a))
+           |> Array.map (fun (d, s) -> sprintf "*%s*\n%s" (d.ToLongDateString()) s)
+           |> String.concat ("\n")
+
+    let getUserCommits (config: Json.UserConfig.Root) = 
+        let commits = getCommitList config.Bitbucket.Email config.Bitbucket.Password
+        formattedMessage commits
+
+     
+
+    let getCommitStatistics telegramUsername = 
+        let storedConfig = UserConfigProvider.getUser telegramUsername
+        match storedConfig with
+            | Some config -> getUserCommits config
+            | None -> "unknown user"
+
     
 

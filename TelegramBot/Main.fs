@@ -11,20 +11,6 @@ module Main =
  
   let handle (update : Json.Update.Result) =
     let reply text = Telegram.sendMessage TOKEN  update.Message.Chat.Id text
-    let sendCommits (commits:BitBucket.ShortCommitInfo[]) = 
-       let stringify (commits : BitBucket.ShortCommitInfo[]) = 
-        commits
-                |> Array.map (fun c -> sprintf "%s" c.message ) 
-                |> Array.map (fun m -> TelegramMarkdown.markJiraTasksInCommitMessage(m))
-                |> String.concat ("")
-
-       let formattedMessage =  
-        BitBucket.groupByDate commits 
-           |> Array.map (fun (d, a) -> d, stringify(a))
-           |> Array.map (fun (d, s) -> sprintf "*%s*\n%s" (d.ToLongDateString()) s)
-           |> String.concat ("\n")
-
-       reply formattedMessage
   
     let match_entity (e: Json.Update.Entity) =
         let sender =  update.Message.From.FirstName
@@ -35,7 +21,7 @@ module Main =
             let command = value
             match command with
              |"/hi"|"/hello" -> reply ("Nice to meet you, " + sender)
-             |"/git" -> sendCommits (BitBucket.getCommitList "ohl@ciklum.com" "ct798wLas9")
+             |"/git" -> reply (BitBucket.getCommitStatistics (update.Message.From.Username))
              |_ -> reply (sprintf "I don't know %s command, %s" command sender)
         |"hashtag" -> reply ("you've used hashtag " + value)
         |_ -> ignore()
@@ -48,7 +34,6 @@ module Main =
 
   [<EntryPoint>]
   let main args =
-  //  HttpServer.startIt()
     Telegram.UpdateSubscribers.Add(handleUpdates)
     Async.Start (Telegram.getUpdatesBackground TOKEN 0)
     while true do

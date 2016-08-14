@@ -1,0 +1,12 @@
+{
+	"bitbucket":{
+		"email" : "mail@ciklum.com",
+		"password" : "asdqwe",
+		"repositories":[
+		  {
+		    "owner" : "reddotsquaresolutions",
+		    "name" : "unity-cuttlefish"
+		  }
+		] 
+	}
+}
