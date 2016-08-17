@@ -23,17 +23,19 @@ module UserConfigProvider =
         let filePath = userCredentialsPath telegramUsername
         let jsonString = credentialsString email password repoOwner repoName
         using (new StreamWriter(filePath)) (fun writer -> writer.Write (jsonString))
+        Json.UserConfig.Load filePath
 
     let saveStingrayCredentials (telegramUsername:string) (email:string) (password:string) = 
         saveUserBitbucketCredentials telegramUsername email password "reddotsquaresolutions" "unity-cuttlefish"
 
     let getUser telegramUsername = 
         if not (isKnownUser telegramUsername) then  saveUserBitbucketCredentials telegramUsername "" "" "reddotsquaresolutions" "unity-cuttlefish"
-        Json.UserConfig.Load (userCredentialsPath telegramUsername)
+        else Json.UserConfig.Load (userCredentialsPath telegramUsername)
 
     let saveEmail telegramUsername email = 
         let credentials = getUser telegramUsername
         saveUserBitbucketCredentials telegramUsername email credentials.Bitbucket.Password credentials.Bitbucket.Repositories.[0].Owner credentials.Bitbucket.Repositories.[0].Name
+        
 
     let savePassword telegramUsername password = 
         let credentials = getUser telegramUsername
