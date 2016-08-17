@@ -57,16 +57,13 @@ module Telegram =
   let keyboard chatId text =
     let url  = sendMessageEndpoint TOKEN 
 
-  //  let replyKeyboardMakeup = "{\"keyboard\": [[\"a\",\"b\"],[\"c\",\"d\"]], \"resize_keyboard\": False, \"one_time_keyboard\": True}"
     try
+        let keyboard =  "{\"keyboard\":[[\"Hello\"], [\"Sun\", \"Moon\"], [\"11\",\"22\",\"33\",\"44\",\"55\"]], \"one_time_keyboard\": true,\"resize_keyboard\": true}"
         Http.RequestString (url, 
             query=[
                 "chat_id", chatId.ToString(); 
                 "text", text; 
-                "reply_markup", "{\"replyKeyboardMarkup\":{\"keyboard\":[[\"a\"], [\"b\"]]}}";
-               // "{\"replyKeyboardMarkup\":{\"keyboard\":[[{\"text\":\"a\"}],[{\"text\":\"b\"}]],\"resize_keyboard\":\"true\",            \"one_time_keyboard\":\"true\"}}";
-                 
-
+                "reply_markup", keyboard;
             ])
         |> ignore 
     with
