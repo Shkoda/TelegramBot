@@ -19,7 +19,7 @@ module TelegramMarkdown =
     let commitsToString (commits : Json.CommitsResponse.Value[]) = 
         commits
                 |> Array.map (fun c -> sprintf "%s" c.Message ) 
-                |> Array.map (fun m -> markJiraTasksInCommitMessage(m))
+                |> Array.map  markJiraTasksInCommitMessage
                 |> String.concat ("")         
 
     let commitsByDateText (commits : Json.CommitsResponse.Value[]) = 
@@ -32,6 +32,18 @@ module TelegramMarkdown =
         groupByDate commits 
            |> Array.map datedCommitsToString
            |> String.concat ("\n")
+
+    let userAsString (user: Json.UserConfig.Root) = 
+        let repositoriesAsString (repos: Json.UserConfig.Repository[]) = 
+            let repositoryAsString (repo: Json.UserConfig.Repository) = 
+                let bitbucketUrl = "https://bitbucket.org"
+                sprintf "%s/%s/%s" bitbucketUrl repo.Owner repo.Name
+            repos |> Array.map repositoryAsString |> String.concat("\n")  
+        
+        sprintf "*Bitbucked account:*\n_login:_%s\n_password_:%s\n\n*Repositories:*\n%s" 
+            user.Bitbucket.Email 
+            user.Bitbucket.Password 
+            (repositoriesAsString (user.Bitbucket.Repositories))
 
 
 

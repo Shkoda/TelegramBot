@@ -4,8 +4,10 @@ module UserConfigProvider =
     open System
 
     let credentialsFolder = "../../../user_data/"
-    let credentialsPattern = "{\"bitbucket\":{\"email\":\"{0}\",\"password\":\"{1}\",\"repositories\":[{\"owner\":\"{2}\",\"name\":\"{3}\"}]}}"
-    let credentialsString email password repoOwner repoName = String.Format(credentialsPattern, email, password, repoOwner, repoName)
+
+    let credentialsString (email:string) (password:string) (repoOwner:string) (repoName:string) = 
+        sprintf   "{\"bitbucket\":{\"email\":\"%s\",\"password\":\"%s\",\"repositories\":[{\"owner\":\"%s\",\"name\":\"%s\"}]}}" 
+             email password repoOwner repoName
 
     let createCredentialsFolderifNotExist = 
         if not (Directory.Exists credentialsFolder) 
@@ -19,8 +21,8 @@ module UserConfigProvider =
     let saveUserBitbucketCredentials telegramUsername email password repoOwner repoName = 
         createCredentialsFolderifNotExist
         let filePath = userCredentialsPath telegramUsername
-        let jsonString = credentialsString (email, password, repoOwner, repoName)
-        using (new StreamWriter(filePath)) (fun writer -> writer.Write jsonString)
+        let jsonString = credentialsString email password repoOwner repoName
+        using (new StreamWriter(filePath)) (fun writer -> writer.Write (jsonString))
 
     let saveStingrayCredentials (telegramUsername:string) (email:string) (password:string) = 
         saveUserBitbucketCredentials telegramUsername email password "reddotsquaresolutions" "unity-cuttlefish"
