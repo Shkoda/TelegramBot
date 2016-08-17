@@ -5,8 +5,7 @@ module CommandParser =
     open FSharp.Data
 
     type UserInput = 
-        | NoArgCommand of string
-        | ArgCommand of string * string[]
+        | Command of string * string[]
         | Text of string
         | Invalid of string
 
@@ -16,10 +15,8 @@ module CommandParser =
         let parseCommand (update: Json.Update.Result) (entity:Json.Update.Entity) = 
             let command = update.Message.Text.Substring(entity.Offset, entity.Length) 
             let messageAfterCommand = (update.Message.Text.Substring (entity.Offset + entity.Length)).Trim()
- 
-            match messageAfterCommand.Length with
-            | 0 -> NoArgCommand (command)
-            | _ -> ArgCommand (command,  messageAfterCommand.Split([|' '|]))
+
+            Command (command,  messageAfterCommand.Split([|' '|], StringSplitOptions.RemoveEmptyEntries))
 
         match commandEntities.Length with
         | 0 -> Text (update.Message.Text)

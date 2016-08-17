@@ -54,9 +54,8 @@ module Telegram =
           | _                          -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
       sendMessage TOKEN chatId text
 
-  let keyboard chatId text =
+  let showKeyboard chatId text =
     let url  = sendMessageEndpoint TOKEN 
-
     try
         let keyboard =  "{\"keyboard\":[[\"Hello\"], [\"Sun\", \"Moon\"], [\"11\",\"22\",\"33\",\"44\",\"55\"]], \"one_time_keyboard\": true,\"resize_keyboard\": true}"
         Http.RequestString (url, 
@@ -68,4 +67,12 @@ module Telegram =
         |> ignore 
     with
     | :? System.Net.WebException as ex-> printfn "%s Telegram.fs:(%s) %s" HTTPEXN __LINE__  ex.Message|> ignore
-    | _                          -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
+    | _-> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
+
+  let hideKeyboard chatId text = 
+    try
+        Http.RequestString (sendMessageEndpoint TOKEN, 
+             query=["chat_id", chatId.ToString(); "text", text; "reply_markup", "{\"hide_keyboard\":true}";])|> ignore 
+    with
+     | :? System.Net.WebException as ex-> printfn "%s Telegram.fs:(%s) %s" HTTPEXN __LINE__  ex.Message|> ignore
+     | _  -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore

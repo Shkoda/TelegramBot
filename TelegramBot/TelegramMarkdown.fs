@@ -33,6 +33,12 @@ module TelegramMarkdown =
            |> Array.map datedCommitsToString
            |> String.concat ("\n")
 
+    let passwordSafeView (rawPassword: string) =
+        match rawPassword.Length with
+        | 0 -> "PASSWORD IS NOT DEFINED"
+        | _ ->   rawPassword.ToCharArray() |> Array.map (fun c -> "#") |> String.Concat
+      
+
     let userAsString (user: Json.UserConfig.Root) = 
         let repositoriesAsString (repos: Json.UserConfig.Repository[]) = 
             let repositoryAsString (repo: Json.UserConfig.Repository) = 
@@ -40,9 +46,9 @@ module TelegramMarkdown =
                 sprintf "%s/%s/%s" bitbucketUrl repo.Owner repo.Name
             repos |> Array.map repositoryAsString |> String.concat("\n")  
         
-        sprintf "*Bitbucked account:*\n_login:_%s\n_password_:%s\n\n*Repositories:*\n%s" 
-            user.Bitbucket.Email 
-            user.Bitbucket.Password 
+        sprintf "*Bitbucked account:*\n_login:_    %s\n_password:_    %s\n\n*Repositories:*\n%s\n" 
+            (user.Bitbucket.Email)
+            (passwordSafeView(user.Bitbucket.Password))
             (repositoriesAsString (user.Bitbucket.Repositories))
 
 
