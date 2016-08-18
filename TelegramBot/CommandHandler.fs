@@ -20,6 +20,7 @@ module CommandHandler =
         |"/git" -> reply (BitBucket.getCommitStatistics (sender))
         |"/k" -> Telegram.showKeyboard update.Message.Chat.Id ("i'm trying to show keyboard, " + firstName)
         |"/h" -> Telegram.hideKeyboard update.Message.Chat.Id ("i'm trying to hide keyboard, " + firstName)
+        |"/ik" ->  Telegram.showInlineKeyboard update.Message.Chat.Id ("i'm trying to show inline keyboard, " + firstName)
         |"/creds" -> reply (TelegramMarkdown.userAsString(UserConfigProvider.getUser(sender)))
         |"/setlogin" |"/setl" |"/setemail" -> reply (setLogin sender args)
         |"/setpass" |"/setpassword" |"/setp" -> reply (setPassword sender args)

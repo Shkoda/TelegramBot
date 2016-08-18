@@ -76,3 +76,20 @@ module Telegram =
     with
      | :? System.Net.WebException as ex-> printfn "%s Telegram.fs:(%s) %s" HTTPEXN __LINE__  ex.Message|> ignore
      | _  -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
+
+
+  let showInlineKeyboard chatId text =
+    let url  = sendMessageEndpoint TOKEN 
+    try
+        let keyboard =  "{\"inline_keyboard\":[[{\"text\":\"alpha\",\"callback_data\":\"this is callback data\"}]]}"
+        Http.RequestString (url, 
+            query=[
+                "chat_id", chatId.ToString(); 
+                "callback_data", "this is callback";
+                "text", text; 
+                "reply_markup", keyboard;
+            ])
+        |> ignore 
+    with
+    | :? System.Net.WebException as ex-> printfn "%s Telegram.fs:(%s) %s" HTTPEXN __LINE__  ex.Message|> ignore
+    | _-> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
