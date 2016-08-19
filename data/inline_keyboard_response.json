@@ -1,0 +1,30 @@
+{
+  "update_id": 736904494,
+  "callback_query": {
+    "id": "724388317893856048",
+    "from": {
+      "id": 168659798,
+      "first_name": "Shkoda",
+      "last_name": "Aleceya",
+      "username": "freilin"
+    },
+    "message": {
+      "message_id": 775,
+      "from": {
+        "id": 231953668,
+        "first_name": "Celesta",
+        "username": "aleceya_bot"
+      },
+      "chat": {
+        "id": 168659798,
+        "first_name": "Shkoda",
+        "last_name": "Aleceya",
+        "username": "freilin",
+        "type": "private"
+      },
+      "date": 1471597175,
+      "text": "i'm trying to show inline keyboard, Shkoda"
+    },
+    "data": "this is callback data"
+  }
+}
