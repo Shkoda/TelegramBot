@@ -19,6 +19,9 @@ module CommandHandler =
         |"/issues" -> reply (TelegramMarkdown.issuesToString(Jira.getNotClosedIssuesCurrentSprint (UserConfigProvider.getUser(sender).Jira)))
         |"/ik2" -> Telegram.showConfigurableInlineKeyboard chatId [|"aa"; "bb"|]
         | _ -> reply (sprintf "I don't know %s command, %s" command firstname)
+    
+    let handleInlineResponse (response: Json.Update.CallbackQuery) = 
+        Telegram.hideInlineKeyboard response.Message.Chat.Id response.Message.MessageId
 
     let handle (update : Json.Update.Result) =
         let reply text = Telegram.sendMessage (Json.chatId update) text
@@ -28,7 +31,7 @@ module CommandHandler =
                                 | CommandParser.Invalid i -> reply (sprintf "Invalid input: %s" i)
                                 | CommandParser.Text t -> reply (sprintf "Text received: %s" t)
                                 | CommandParser.Command (c, args) -> handleCommand (c,args) update
-        | Json.InlineResponce i ->  reply (sprintf "Inline responce %s" i.Data)
+        | Json.InlineResponce i ->  handleInlineResponse i//reply (sprintf "Inline responce %s" i.Data)
         | _ -> raise (System.ArgumentException("can't handle update"))
 
  

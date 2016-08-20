@@ -19,6 +19,7 @@ module Telegram =
   let endpoint token path = "https://api.telegram.org/bot" + token + "/" + path
   let updateEndpoint token =  endpoint token "getUpdates"
   let sendMessageEndpoint token =  endpoint token "sendMessage"
+  let editInlineKeyboardEndpoint token = endpoint token "editMessageReplyMarkup"
 
 
   let nextOffset (results:Json.Update.Result[]) = 
@@ -105,7 +106,6 @@ module Telegram =
         sprintf "{\"inline_keyboard\":%s}" (row)
 
      try
-     //   let keyboard =  "{\"inline_keyboard\":[[{\"text\":\"alpha\",\"callback_data\":\"this is callback data\"}]]}"
         let markup = keyboard strings
         Http.RequestString (url, 
             query=[
@@ -118,3 +118,13 @@ module Telegram =
      with
         | :? System.Net.WebException as ex-> printfn "%s Telegram.fs:(%s) %s" HTTPEXN __LINE__  ex.Message|> ignore
         | _-> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
+
+
+  let hideInlineKeyboard chatId messageId =
+     let url  = editInlineKeyboardEndpoint TOKEN 
+     try
+          Http.RequestString (url, query=["chat_id", chatId.ToString(); "message_id", messageId.ToString(); "reply_markup", ""]) |> ignore 
+     with
+          | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
+          | _                          -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
+    
