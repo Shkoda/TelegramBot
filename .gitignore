@@ -1,3 +1,4 @@
 /credentials
 /user_data/*
-/TelegramBot/bin/Debug/*
+*.exe
+*.pdb
