@@ -17,6 +17,7 @@ module CommandHandler =
         |"/setpass" |"/setpassword" |"/setp" -> reply (BitBucket.setPassword sender args)
         |"/jirauser" -> reply (Jira.userinfo (UserConfigProvider.getUser(sender).Jira))
         |"/issues" -> reply (TelegramMarkdown.issuesToString(Jira.getNotClosedIssuesCurrentSprint (UserConfigProvider.getUser(sender).Jira)))
+        |"/ik2" -> Telegram.showConfigurableInlineKeyboard chatId [|"aa"; "bb"|]
         | _ -> reply (sprintf "I don't know %s command, %s" command firstname)
 
     let handle (update : Json.Update.Result) =
