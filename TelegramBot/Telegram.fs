@@ -20,6 +20,18 @@ module Telegram =
   let updateEndpoint token =  endpoint token "getUpdates"
   let sendMessageEndpoint token =  endpoint token "sendMessage"
 
+  let (|Message|InlineResponce|UnknownFormat|) (update:Json.Update.Result) = 
+        match update with
+        |u when u.Message.IsSome -> Message (u.Message.Value)
+        |u when u.CallbackQuery.IsSome -> InlineResponce (u.CallbackQuery.Value)
+        |_ -> UnknownFormat (update)
+
+
+  let nextOffset (results:Json.Update.Result[]) = 
+     let updateId (result: Json.Update.Result) = result.UpdateId    
+     results |> Array.map updateId |> Array.tryLast |> Option.fold (fun _ i ->increment i) 0
+
+
   let getUpdatesBackground = fun() ->
       let rec getUpdatesBackground token offset =
 
@@ -27,17 +39,13 @@ module Telegram =
             try 
                 let url = updateEndpoint token 
                 let! responseString = Http.AsyncRequestString(url, query=["offset", offset.ToString()])
-                let update =  responseString |> Json.Update.Parse 
-                updateReceived.Trigger update.Result
-            
-      
-                let nextOffset = match update.Result with
-                                 | r when Seq.isEmpty r = false    
-                                    -> r |> Array.map (fun elem -> elem.UpdateId) |> Array.last |> increment 
-                                 | _ -> 0
+                let update = responseString |> Json.Update.Parse |> (fun root -> root.Result) 
+                updateReceived.Trigger update
+
                 sleep 100 
 
-                do! getUpdatesBackground token nextOffset          
+                let offset = nextOffset update
+                do! getUpdatesBackground token offset       
             with
             | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__;  Async.Start (getUpdatesBackground token 0)  
             | _                          -> printfn "%s (%s)" JSONEXN __LINE__; Async.Start (getUpdatesBackground token 0)  
