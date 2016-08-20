@@ -1,0 +1,16 @@
+{
+  "maxResults": 50,
+  "startAt": 0,
+  "isLast": true,
+  "values": [
+    {
+      "id": 274,
+      "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/274",
+      "state": "active",
+      "name": "Sprint 35 Stingray (PI4)",
+      "startDate": "2016-08-18T12:36:59.381+01:00",
+      "endDate": "2016-08-31T12:36:00.000+01:00",
+      "originBoardId": 28
+    }
+  ]
+}

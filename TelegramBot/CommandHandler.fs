@@ -16,6 +16,7 @@ module CommandHandler =
         |"/setlogin" |"/setl" |"/setemail" -> reply (BitBucket.setLogin sender args)
         |"/setpass" |"/setpassword" |"/setp" -> reply (BitBucket.setPassword sender args)
         |"/jirauser" -> reply (Jira.userinfo (UserConfigProvider.getUser(sender).Jira))
+        |"/issues" -> reply (TelegramMarkdown.issuesToString(Jira.getNotClosedIssuesCurrentSprint (UserConfigProvider.getUser(sender).Jira)))
         | _ -> reply (sprintf "I don't know %s command, %s" command firstname)
 
     let handle (update : Json.Update.Result) =

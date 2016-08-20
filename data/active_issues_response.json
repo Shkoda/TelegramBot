@@ -1,0 +1,3047 @@
+{
+  "expand": "schema,names",
+  "startAt": 0,
+  "maxResults": 50,
+  "total": 6,
+  "issues": [
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "29823",
+      "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/issue/29823",
+      "key": "NG-12060",
+      "fields": {
+        "issuetype": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issuetype/10001",
+          "id": "10001",
+          "description": "A user story. Created by JIRA Software - do not edit or delete.",
+          "iconUrl": "https://reddotsquare.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10915&avatarType=issuetype",
+          "name": "Story",
+          "subtask": false,
+          "avatarId": 10915
+        },
+        "timespent": null,
+        "sprint": {
+          "id": 274,
+          "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/274",
+          "state": "active",
+          "name": "Sprint 35 Stingray (PI4)",
+          "startDate": "2016-08-18T12:36:59.381+01:00",
+          "endDate": "2016-08-31T12:36:00.000+01:00",
+          "originBoardId": 28
+        },
+        "project": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/project/10900",
+          "id": "10900",
+          "key": "NG",
+          "name": "Next Gen.",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/projectavatar?pid=10900&avatarId=10011",
+            "24x24": "https://reddotsquare.atlassian.net/secure/projectavatar?size=small&pid=10900&avatarId=10011",
+            "16x16": "https://reddotsquare.atlassian.net/secure/projectavatar?size=xsmall&pid=10900&avatarId=10011",
+            "32x32": "https://reddotsquare.atlassian.net/secure/projectavatar?size=medium&pid=10900&avatarId=10011"
+          },
+          "projectCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/projectCategory/10000",
+            "id": "10000",
+            "description": "",
+            "name": "Core Development"
+          }
+        },
+        "fixVersions": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13000",
+            "id": "13000",
+            "description": "Program increment 4 (June-August 2016), for tracking purposes.",
+            "name": "PI4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13600",
+            "id": "13600",
+            "description": "Fix version for release in PI4",
+            "name": "1.4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          }
+        ],
+        "customfield_11001": null,
+        "aggregatetimespent": null,
+        "resolution": null,
+        "customfield_11003": "https://reddotsquare.atlassian.net/wiki/display/NGC/Shopping+Mode",
+        "customfield_11004": "*As a Research Moderator I want to download all Shopping Sessions reports in one CSV format file*\r\n* User can download all shopping sessions report just after finishing shopping\r\n* User can download all shopping sessions report from Shopping Research panel\r\n* System will download the report to user's desktop\r\n* Name of the file: 'ProjectName All shopping reports date', where date has the following format '16-08-2016'\r\n\r\nUser can download report from Shopping Researches panel (https://reddotsquare.atlassian.net/browse/NG-12059) and shopping research dashboard (https://reddotsquare.atlassian.net/browse/NG-12057)",
+        "customfield_11400": null,
+        "customfield_10500": null,
+        "customfield_10900": null,
+        "customfield_10901": null,
+        "resolutiondate": null,
+        "workratio": 0,
+        "lastViewed": null,
+        "watches": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-12060/watchers",
+          "watchCount": 2,
+          "isWatching": false
+        },
+        "created": "2016-05-30T11:48:40.000+0100",
+        "customfield_10020": null,
+        "customfield_10021": "Not started",
+        "epic": {
+          "id": 16731,
+          "key": "NG-3564",
+          "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/epic/16731",
+          "name": "[Unity] Shopping Mode",
+          "summary": "[Unity] Shopping Mode",
+          "color": {
+            "key": "color_1"
+          },
+          "done": false
+        },
+        "priority": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/priority/3",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/priorities/major.svg",
+          "name": "Major",
+          "id": "3"
+        },
+        "customfield_10100": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10100",
+          "value": "Next Gen. Tech.",
+          "id": "10100"
+        },
+        "customfield_10024": null,
+        "customfield_10300": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10300",
+          "value": "Stingray",
+          "id": "10300"
+        },
+        "labels": [],
+        "customfield_10016": null,
+        "customfield_11700": null,
+        "customfield_10017": null,
+        "customfield_10018": null,
+        "customfield_11702": null,
+        "customfield_10019": null,
+        "customfield_11701": null,
+        "timeestimate": 28800,
+        "aggregatetimeoriginalestimate": 28800,
+        "versions": [],
+        "customfield_11703": null,
+        "issuelinks": [
+          {
+            "id": "35211",
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/issueLink/35211",
+            "type": {
+              "id": "10003",
+              "name": "Relates",
+              "inward": "relates to",
+              "outward": "relates to",
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issueLinkType/10003"
+            },
+            "outwardIssue": {
+              "id": "29821",
+              "key": "NG-12058",
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/29821",
+              "fields": {
+                "summary": "Research Moderator downloads research results as CSV file",
+                "status": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/status/3",
+                  "description": "This issue is being actively worked on at the moment by the assignee.",
+                  "iconUrl": "https://reddotsquare.atlassian.net/images/icons/statuses/inprogress.png",
+                  "name": "In Progress",
+                  "id": "3",
+                  "statusCategory": {
+                    "self": "https://reddotsquare.atlassian.net/rest/api/2/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "yellow",
+                    "name": "In Progress"
+                  }
+                },
+                "priority": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/priority/3",
+                  "iconUrl": "https://reddotsquare.atlassian.net/images/icons/priorities/major.svg",
+                  "name": "Major",
+                  "id": "3"
+                },
+                "issuetype": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/issuetype/10001",
+                  "id": "10001",
+                  "description": "A user story. Created by JIRA Software - do not edit or delete.",
+                  "iconUrl": "https://reddotsquare.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10915&avatarType=issuetype",
+                  "name": "Story",
+                  "subtask": false,
+                  "avatarId": 10915
+                }
+              }
+            }
+          }
+        ],
+        "assignee": null,
+        "updated": "2016-08-18T13:52:22.000+0100",
+        "status": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/status/10001",
+          "description": "",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/statuses/open.png",
+          "name": "To Do",
+          "id": "10001",
+          "statusCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "components": [],
+        "timeoriginalestimate": 28800,
+        "description": "In case of Back involvement - 5",
+        "customfield_11100": null,
+        "customfield_10012": null,
+        "customfield_10013": null,
+        "customfield_10014": null,
+        "customfield_11500": null,
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h",
+          "originalEstimateSeconds": 28800,
+          "remainingEstimateSeconds": 28800
+        },
+        "customfield_10015": null,
+        "customfield_10005": null,
+        "customfield_10006": "9223372036854775807",
+        "customfield_10600": null,
+        "customfield_10007": [
+          "com.atlassian.greenhopper.service.sprint.Sprint@1783a2d[id=274,rapidViewId=28,state=ACTIVE,name=Sprint 35 Stingray (PI4),goal=Shopping Mode implementation continue,startDate=2016-08-18T12:36:59.381+01:00,endDate=2016-08-31T12:36:00.000+01:00,completeDate=<null>,sequence=274]"
+        ],
+        "customfield_10601": null,
+        "customfield_10008": "NG-3564",
+        "customfield_10800": [],
+        "attachment": [],
+        "aggregatetimeestimate": 28800,
+        "flagged": false,
+        "summary": "Research Moderator downloads results of all researches during session as CSV file",
+        "creator": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=anka%40ciklum.com",
+          "name": "anka@ciklum.com",
+          "key": "anka@ciklum.com",
+          "emailAddress": "anka@ciklum.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=anka%40ciklum.com&avatarId=12800",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=anka%40ciklum.com&avatarId=12800",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=anka%40ciklum.com&avatarId=12800",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=anka%40ciklum.com&avatarId=12800"
+          },
+          "displayName": "Andrii Karabak",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=anka%40ciklum.com",
+          "name": "anka@ciklum.com",
+          "key": "anka@ciklum.com",
+          "emailAddress": "anka@ciklum.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=anka%40ciklum.com&avatarId=12800",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=anka%40ciklum.com&avatarId=12800",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=anka%40ciklum.com&avatarId=12800",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=anka%40ciklum.com&avatarId=12800"
+          },
+          "displayName": "Andrii Karabak",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "customfield_10000": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 28800,
+          "percent": 0
+        },
+        "customfield_10001": "2016-07-11T18:27:35.457+0100",
+        "customfield_10200": null,
+        "customfield_10002": null,
+        "customfield_10003": null,
+        "customfield_10400": "1|hzxwwg:v",
+        "customfield_10004": 1,
+        "customfield_11600": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@cc35ae",
+        "environment": null,
+        "duedate": null,
+        "progress": {
+          "progress": 0,
+          "total": 28800,
+          "percent": 0
+        },
+        "comment": {
+          "comments": [
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/29823/comment/31547",
+              "id": "31547",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=maksym_iakimov_rds",
+                "name": "maksym_iakimov_rds",
+                "key": "maksym_lakimov_rds",
+                "emailAddress": "maia@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Maksym Iakimov",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~anka@ciklum.com]\r\nis this story for Cloud FE? then should be market, maybe. ",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=maksym_iakimov_rds",
+                "name": "maksym_iakimov_rds",
+                "key": "maksym_lakimov_rds",
+                "emailAddress": "maia@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Maksym Iakimov",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-07-11T18:27:35.457+0100",
+              "updated": "2016-07-11T18:27:35.457+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/29823/comment/31606",
+              "id": "31606",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=anka%40ciklum.com",
+                "name": "anka@ciklum.com",
+                "key": "anka@ciklum.com",
+                "emailAddress": "anka@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=anka%40ciklum.com&avatarId=12800",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=anka%40ciklum.com&avatarId=12800",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=anka%40ciklum.com&avatarId=12800",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=anka%40ciklum.com&avatarId=12800"
+                },
+                "displayName": "Andrii Karabak",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~maksym_iakimov_rds]: no, it's Unity",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=anka%40ciklum.com",
+                "name": "anka@ciklum.com",
+                "key": "anka@ciklum.com",
+                "emailAddress": "anka@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=anka%40ciklum.com&avatarId=12800",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=anka%40ciklum.com&avatarId=12800",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=anka%40ciklum.com&avatarId=12800",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=anka%40ciklum.com&avatarId=12800"
+                },
+                "displayName": "Andrii Karabak",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-07-12T09:59:24.225+0100",
+              "updated": "2016-07-12T09:59:24.225+0100"
+            }
+          ],
+          "maxResults": 2,
+          "total": 2,
+          "startAt": 0
+        },
+        "votes": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-12060/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "33015",
+      "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/issue/33015",
+      "key": "NG-13059",
+      "fields": {
+        "issuetype": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issuetype/1",
+          "id": "1",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "https://reddotsquare.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10903&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 10903
+        },
+        "timespent": null,
+        "sprint": {
+          "id": 274,
+          "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/274",
+          "state": "active",
+          "name": "Sprint 35 Stingray (PI4)",
+          "startDate": "2016-08-18T12:36:59.381+01:00",
+          "endDate": "2016-08-31T12:36:00.000+01:00",
+          "originBoardId": 28
+        },
+        "project": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/project/10900",
+          "id": "10900",
+          "key": "NG",
+          "name": "Next Gen.",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/projectavatar?pid=10900&avatarId=10011",
+            "24x24": "https://reddotsquare.atlassian.net/secure/projectavatar?size=small&pid=10900&avatarId=10011",
+            "16x16": "https://reddotsquare.atlassian.net/secure/projectavatar?size=xsmall&pid=10900&avatarId=10011",
+            "32x32": "https://reddotsquare.atlassian.net/secure/projectavatar?size=medium&pid=10900&avatarId=10011"
+          },
+          "projectCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/projectCategory/10000",
+            "id": "10000",
+            "description": "",
+            "name": "Core Development"
+          }
+        },
+        "fixVersions": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13000",
+            "id": "13000",
+            "description": "Program increment 4 (June-August 2016), for tracking purposes.",
+            "name": "PI4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13600",
+            "id": "13600",
+            "description": "Fix version for release in PI4",
+            "name": "1.4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          }
+        ],
+        "customfield_11001": null,
+        "aggregatetimespent": null,
+        "resolution": null,
+        "customfield_11003": null,
+        "customfield_11004": null,
+        "customfield_11400": null,
+        "customfield_10500": null,
+        "customfield_10701": null,
+        "customfield_10900": null,
+        "customfield_10901": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "lastViewed": null,
+        "watches": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13059/watchers",
+          "watchCount": 1,
+          "isWatching": false
+        },
+        "created": "2016-07-28T11:09:47.000+0100",
+        "customfield_10020": null,
+        "customfield_10021": "Not started",
+        "priority": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/priority/3",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/priorities/major.svg",
+          "name": "Major",
+          "id": "3"
+        },
+        "customfield_10100": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10100",
+          "value": "Next Gen. Tech.",
+          "id": "10100"
+        },
+        "customfield_10024": null,
+        "customfield_10300": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10300",
+          "value": "Stingray",
+          "id": "10300"
+        },
+        "labels": [],
+        "customfield_10016": null,
+        "customfield_11700": null,
+        "customfield_10017": null,
+        "customfield_10018": null,
+        "customfield_11702": null,
+        "customfield_10019": null,
+        "customfield_11701": null,
+        "timeestimate": null,
+        "aggregatetimeoriginalestimate": null,
+        "versions": [],
+        "customfield_11703": null,
+        "issuelinks": [],
+        "assignee": null,
+        "updated": "2016-08-18T13:10:05.000+0100",
+        "status": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/status/10001",
+          "description": "",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/statuses/open.png",
+          "name": "To Do",
+          "id": "10001",
+          "statusCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "components": [],
+        "timeoriginalestimate": null,
+        "description": "*StR* \r\n# Log in to staging env under Ciklum_Tetiana_Markova / 123456Mt\r\n# open any scene  and launch it in via video streaming\r\n# select \"Europe\" \r\n\r\n*AcR* Scene starts loading, and then crash window appears  \r\n*ExR* Scene should be launched successfully \r\n\r\n*Important* repeatability is nearly 10%, there is no preconditions for it. I can't reproduce it on sandbox and other environments ",
+        "customfield_11100": null,
+        "customfield_10012": null,
+        "customfield_10013": null,
+        "customfield_10014": null,
+        "customfield_11500": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/11905",
+            "value": "Staging",
+            "id": "11905"
+          }
+        ],
+        "timetracking": {},
+        "customfield_10015": null,
+        "customfield_10006": "9223372036854775807",
+        "customfield_10600": null,
+        "customfield_10007": [
+          "com.atlassian.greenhopper.service.sprint.Sprint@1783a2d[id=274,rapidViewId=28,state=ACTIVE,name=Sprint 35 Stingray (PI4),goal=Shopping Mode implementation continue,startDate=2016-08-18T12:36:59.381+01:00,endDate=2016-08-31T12:36:00.000+01:00,completeDate=<null>,sequence=274]"
+        ],
+        "customfield_10601": null,
+        "customfield_10008": null,
+        "customfield_10800": [],
+        "attachment": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/25929",
+            "id": "25929",
+            "filename": "Screenshot_816.png",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+              "name": "tema@ciklum.com",
+              "key": "tema@ciklum.com",
+              "emailAddress": "tema@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+              },
+              "displayName": "Tetiana Markova",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-07-28T11:08:34.521+0100",
+            "size": 942964,
+            "mimeType": "image/png",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/25929/Screenshot_816.png",
+            "thumbnail": "https://reddotsquare.atlassian.net/secure/thumbnail/25929/_thumb_25929.png"
+          }
+        ],
+        "aggregatetimeestimate": null,
+        "flagged": false,
+        "summary": "Sometimes VRI Player crashes in videostreaming",
+        "creator": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+          "name": "tema@ciklum.com",
+          "key": "tema@ciklum.com",
+          "emailAddress": "tema@ciklum.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+          },
+          "displayName": "Tetiana Markova",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+          "name": "tema@ciklum.com",
+          "key": "tema@ciklum.com",
+          "emailAddress": "tema@ciklum.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+          },
+          "displayName": "Tetiana Markova",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "customfield_10000": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "customfield_10001": null,
+        "customfield_10200": null,
+        "customfield_10002": null,
+        "customfield_10003": null,
+        "customfield_10400": "1|hzxwwh:",
+        "customfield_11600": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@169e0b5",
+        "environment": "Browser: Firefox 47.0.1\r\nChrome 51\r\nLocation: Europe and North America ",
+        "duedate": null,
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "comment": {
+          "comments": [],
+          "maxResults": 0,
+          "total": 0,
+          "startAt": 0
+        },
+        "votes": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13059/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "33134",
+      "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/issue/33134",
+      "key": "NG-13115",
+      "fields": {
+        "issuetype": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issuetype/1",
+          "id": "1",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "https://reddotsquare.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10903&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 10903
+        },
+        "timespent": null,
+        "sprint": {
+          "id": 274,
+          "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/274",
+          "state": "active",
+          "name": "Sprint 35 Stingray (PI4)",
+          "startDate": "2016-08-18T12:36:59.381+01:00",
+          "endDate": "2016-08-31T12:36:00.000+01:00",
+          "originBoardId": 28
+        },
+        "project": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/project/10900",
+          "id": "10900",
+          "key": "NG",
+          "name": "Next Gen.",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/projectavatar?pid=10900&avatarId=10011",
+            "24x24": "https://reddotsquare.atlassian.net/secure/projectavatar?size=small&pid=10900&avatarId=10011",
+            "16x16": "https://reddotsquare.atlassian.net/secure/projectavatar?size=xsmall&pid=10900&avatarId=10011",
+            "32x32": "https://reddotsquare.atlassian.net/secure/projectavatar?size=medium&pid=10900&avatarId=10011"
+          },
+          "projectCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/projectCategory/10000",
+            "id": "10000",
+            "description": "",
+            "name": "Core Development"
+          }
+        },
+        "fixVersions": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13000",
+            "id": "13000",
+            "description": "Program increment 4 (June-August 2016), for tracking purposes.",
+            "name": "PI4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13600",
+            "id": "13600",
+            "description": "Fix version for release in PI4",
+            "name": "1.4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          }
+        ],
+        "customfield_11001": null,
+        "aggregatetimespent": null,
+        "resolution": null,
+        "customfield_11003": null,
+        "customfield_11004": null,
+        "customfield_11400": null,
+        "customfield_10500": null,
+        "customfield_10701": 100,
+        "customfield_10900": null,
+        "customfield_10901": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "lastViewed": "2016-08-17T09:58:45.786+0100",
+        "watches": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13115/watchers",
+          "watchCount": 4,
+          "isWatching": false
+        },
+        "created": "2016-08-01T13:04:25.000+0100",
+        "customfield_10020": null,
+        "customfield_10021": "Not started",
+        "priority": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/priority/1",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/priorities/blocker.svg",
+          "name": "Blocker",
+          "id": "1"
+        },
+        "customfield_10100": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10100",
+          "value": "Next Gen. Tech.",
+          "id": "10100"
+        },
+        "customfield_10024": null,
+        "customfield_10300": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10300",
+          "value": "Stingray",
+          "id": "10300"
+        },
+        "labels": [
+          "Feedback-Client/Support/Training",
+          "QaCannotReproduce",
+          "Saving_Scenario",
+          "Unknown_Reason",
+          "UserFlow"
+        ],
+        "customfield_10016": null,
+        "customfield_11700": null,
+        "customfield_10017": null,
+        "customfield_10018": null,
+        "customfield_11702": null,
+        "customfield_10019": null,
+        "customfield_11701": null,
+        "timeestimate": null,
+        "aggregatetimeoriginalestimate": null,
+        "versions": [],
+        "customfield_11703": null,
+        "issuelinks": [],
+        "assignee": null,
+        "updated": "2016-08-18T13:04:15.000+0100",
+        "status": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/status/10001",
+          "description": "",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/statuses/open.png",
+          "name": "To Do",
+          "id": "10001",
+          "statusCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "components": [],
+        "timeoriginalestimate": null,
+        "description": "Reported by [~johnos] in http://support.vrinfinity.com/helpdesk/tickets/21540.  Verified by [~amberj]\r\n\r\nPlanograms held in switches are being moved on save with overwrite, and object property colours are not being saved\r\n\r\nReproduction steps:\r\n* Clone the store below\r\n* Visualise all POGs in 2D, by using the silver and gold palnogram switches\r\n* View switches Initial, Gold and Silver\r\n* Correct layout as shown in video\r\n* Correct POS colours as shown in the video\r\n* Save with overwrite\r\n* Close project\r\n* relaunch project\r\n\r\nExpected results: Changes should be saved\r\nActual result: Planograms move to elsewhere in the scene and OBJ colour revert to default grey\r\n\r\nI have been able to reproduce this with save with overwrite and save as new\r\n\r\n*Please note that @john has a presentation in China this Wednesday, and is +8 hours to London.  This needs to be resolved by end of day on Tuesday so that he can use this project.*\r\n\r\nScene: Carrefour-Laundry-Amber (https://vrinfinity.com/cloudlibrary/ui/projects/47d3c4dd-564f-4a16-9c56-6d1ba0e0e0c7)\r\nUser credentials: UL_KRVR_Support / dXGR5&CJ2I\r\n\r\nThe scene that I created from this original store: AJ#2150(3-clone) (https://vrinfinity.com/cloudlibrary/ui/projects/70371cf3-5612-45a0-9597-9a7255e050c8)\r\n\r\nhttps://ktglbuc-my.sharepoint.com/personal/amberj_reddotsquare_com/_layouts/15/guestaccess.aspx?guestaccesstoken=q%2f7%2fpYFs8aNenCOLn26QnhyR6%2fwWitjtj6UtVi9MroE%3d&docid=1e3225a82ff724751ba7f0f4bdafd4369&rev=1",
+        "customfield_11100": null,
+        "customfield_10012": null,
+        "customfield_10013": null,
+        "customfield_10014": null,
+        "customfield_11500": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/11906",
+            "value": "Cloud (Production)",
+            "id": "11906"
+          }
+        ],
+        "timetracking": {},
+        "customfield_10015": null,
+        "customfield_10006": "9223372036854775807",
+        "customfield_10600": null,
+        "customfield_10007": [
+          "com.atlassian.greenhopper.service.sprint.Sprint@d11366[id=264,rapidViewId=28,state=CLOSED,name=Sprint 33 Stingray (PI4),goal=To implement Navigation Mode,startDate=2016-07-22T11:22:38.447+01:00,endDate=2016-08-03T11:22:00.000+01:00,completeDate=2016-08-04T09:19:58.014+01:00,sequence=264]",
+          "com.atlassian.greenhopper.service.sprint.Sprint@e3c3f8[id=265,rapidViewId=28,state=CLOSED,name=Sprint 34 Stingray (PI4),goal=,startDate=2016-08-04T18:09:22.477+01:00,endDate=2016-08-17T18:09:00.000+01:00,completeDate=2016-08-18T12:33:38.530+01:00,sequence=265]",
+          "com.atlassian.greenhopper.service.sprint.Sprint@1783a2d[id=274,rapidViewId=28,state=ACTIVE,name=Sprint 35 Stingray (PI4),goal=Shopping Mode implementation continue,startDate=2016-08-18T12:36:59.381+01:00,endDate=2016-08-31T12:36:00.000+01:00,completeDate=<null>,sequence=274]"
+        ],
+        "customfield_10601": null,
+        "customfield_10008": null,
+        "customfield_10800": [],
+        "attachment": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26010",
+            "id": "26010",
+            "filename": "output_log.txt",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+              "name": "amberj",
+              "key": "amberj",
+              "emailAddress": "amberj@reddotsquare.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+              },
+              "displayName": "Amber Jay",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-01T13:56:48.003+0100",
+            "size": 206477,
+            "mimeType": "text/plain",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26010/output_log.txt"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26016",
+            "id": "26016",
+            "filename": "output_log - Copy.txt",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+              "name": "tema@ciklum.com",
+              "key": "tema@ciklum.com",
+              "emailAddress": "tema@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+              },
+              "displayName": "Tetiana Markova",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-01T15:51:54.263+0100",
+            "size": 271275,
+            "mimeType": "text/plain",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26016/output_log+-+Copy.txt"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26017",
+            "id": "26017",
+            "filename": "output_log - Copy (2).txt",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+              "name": "tema@ciklum.com",
+              "key": "tema@ciklum.com",
+              "emailAddress": "tema@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+              },
+              "displayName": "Tetiana Markova",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-01T15:52:11.650+0100",
+            "size": 192685,
+            "mimeType": "text/plain",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26017/output_log+-+Copy+%282%29.txt"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26101",
+            "id": "26101",
+            "filename": "Screenshot_836.png",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+              "name": "tema@ciklum.com",
+              "key": "tema@ciklum.com",
+              "emailAddress": "tema@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+              },
+              "displayName": "Tetiana Markova",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-02T09:39:05.118+0100",
+            "size": 425147,
+            "mimeType": "image/png",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26101/Screenshot_836.png",
+            "thumbnail": "https://reddotsquare.atlassian.net/secure/thumbnail/26101/_thumb_26101.png"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26100",
+            "id": "26100",
+            "filename": "Screenshot_837.png",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+              "name": "tema@ciklum.com",
+              "key": "tema@ciklum.com",
+              "emailAddress": "tema@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+              },
+              "displayName": "Tetiana Markova",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-02T09:39:05.036+0100",
+            "size": 369490,
+            "mimeType": "image/png",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26100/Screenshot_837.png",
+            "thumbnail": "https://reddotsquare.atlassian.net/secure/thumbnail/26100/_thumb_26100.png"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26011",
+            "id": "26011",
+            "filename": "Ticket_21540.mp4",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+              "name": "amberj",
+              "key": "amberj",
+              "emailAddress": "amberj@reddotsquare.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+              },
+              "displayName": "Amber Jay",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-01T14:29:26.664+0100",
+            "size": 403742089,
+            "mimeType": "video/mp4",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26011/Ticket_21540.mp4"
+          }
+        ],
+        "aggregatetimeestimate": null,
+        "flagged": false,
+        "summary": "Planogram positions changed on saving with overwrite in switches, and OBJ colour texture NOT being saved",
+        "creator": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+          "name": "amberj",
+          "key": "amberj",
+          "emailAddress": "amberj@reddotsquare.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+          },
+          "displayName": "Amber Jay",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+          "name": "amberj",
+          "key": "amberj",
+          "emailAddress": "amberj@reddotsquare.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+          },
+          "displayName": "Amber Jay",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "customfield_10000": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "customfield_10001": "2016-08-01T13:04:44.912+0100",
+        "customfield_10200": null,
+        "customfield_10002": null,
+        "customfield_10003": null,
+        "customfield_10400": "1|hzxy1r:yo",
+        "customfield_11600": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@10778e7",
+        "environment": null,
+        "duedate": null,
+        "closedSprints": [
+          {
+            "id": 264,
+            "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/264",
+            "state": "closed",
+            "name": "Sprint 33 Stingray (PI4)",
+            "startDate": "2016-07-22T11:22:38.447+01:00",
+            "endDate": "2016-08-03T11:22:00.000+01:00",
+            "completeDate": "2016-08-04T09:19:58.014+01:00",
+            "originBoardId": 28
+          },
+          {
+            "id": 265,
+            "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/265",
+            "state": "closed",
+            "name": "Sprint 34 Stingray (PI4)",
+            "startDate": "2016-08-04T18:09:22.477+01:00",
+            "endDate": "2016-08-17T18:09:00.000+01:00",
+            "completeDate": "2016-08-18T12:33:38.530+01:00",
+            "originBoardId": 28
+          }
+        ],
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "comment": {
+          "comments": [
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/32520",
+              "id": "32520",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=vrsupport",
+                "name": "vrsupport",
+                "key": "vrsupport",
+                "emailAddress": "vrsupport@kantarretail.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "VRInfinity Support",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "#21540 (http://support.vrinfinity.com/helpdesk/tickets/21540) - VR Infinity Bug: Not-remembering-change-in-position-after-reopen",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=vrsupport",
+                "name": "vrsupport",
+                "key": "vrsupport",
+                "emailAddress": "vrsupport@kantarretail.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "VRInfinity Support",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-01T13:04:44.912+0100",
+              "updated": "2016-08-01T13:04:44.912+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/32532",
+              "id": "32532",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "Logs of VRI player, after saving [^output_log - Copy.txt] \r\nLogs of VRI player after re-opening scene   [^output_log - Copy (2).txt] ",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-01T15:52:26.759+0100",
+              "updated": "2016-08-01T15:52:26.759+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/32604",
+              "id": "32604",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~amberj], hello. Could you add some more detailed steps for \" Correct layout as shown in video and Correct POS colours as shown in the video\" \r\nDo user need to execute the same steps in the same sequence? Or enough to move some planogram and then change obj color to white? Which actions are mandatory for reproducing this bug? Because I can't reproduce this bug in another scene using the similar steps\r\n",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-02T08:54:42.419+0100",
+              "updated": "2016-08-02T08:54:42.419+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/32614",
+              "id": "32614",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "*STR* OBJ colour texture NOT being saved\r\n# Launch scene https://vrinfinity.com/cloudlibrary/ui/projects/c026a8af-6bbe-40f4-925e-fa072314e2b0 under UL_KRVR_Support / dXGR5&CJ2I\r\n# Select switch \"Silver\" \r\n# Change for next object color to white  !Screenshot_837.png|thumbnail!  !Screenshot_836.png|thumbnail! \r\n# Overwrite scene \r\n# Re-launch scene \r\n\r\n*AcR* Changes weren't saved. I Can't reproduce it on another scene. \r\n*ExR* Changes were saved \r\n\r\n[~amberj], I can't reproduce problem with planogram positions changed on saving with overwrite even on original scene, please see previous comment ",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-02T09:40:04.798+0100",
+              "updated": "2016-08-02T09:40:36.197+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/32623",
+              "id": "32623",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+                "name": "amberj",
+                "key": "amberj",
+                "emailAddress": "amberj@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+                },
+                "displayName": "Amber Jay",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "Hi [~tema@ciklum.com] - I don't believe that you need to change things in a particular order.  The screen capture that I did was not done in a special order.  Is the other project that you are trying this on under your account, or under the Unilever admin account?  Is it possible that it is an account issue, an issue with the project, or that there is an issue with the small planogram bays that [~johnos] created and uploaded?",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+                "name": "amberj",
+                "key": "amberj",
+                "emailAddress": "amberj@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+                },
+                "displayName": "Amber Jay",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-02T10:39:31.162+0100",
+              "updated": "2016-08-02T10:39:31.162+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/32626",
+              "id": "32626",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~amberj], I tried under my account. \r\nIt will be very useful  if you add another scene, where you can reproduce it. Because for now it looks like an issue with the project\r\nAnd want to mention, that I am able to reproduce  problem with obj only on clone of scene from description. And  am unable to reproduce problem with planogram positions  on any scene. ",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-02T11:02:27.736+0100",
+              "updated": "2016-08-02T11:02:27.736+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/32648",
+              "id": "32648",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+                "name": "amberj",
+                "key": "amberj",
+                "emailAddress": "amberj@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+                },
+                "displayName": "Amber Jay",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~johnos], would you be able to send me the planogram squares that you have been using for that project, so that I can upload them to a different project under the RDSS Presenter's group? Thanks!",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+                "name": "amberj",
+                "key": "amberj",
+                "emailAddress": "amberj@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+                },
+                "displayName": "Amber Jay",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-02T13:18:35.528+0100",
+              "updated": "2016-08-02T13:18:35.528+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/32678",
+              "id": "32678",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=johnos",
+                "name": "johnos",
+                "key": "johnos",
+                "emailAddress": "johnos@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "John O'Sullivan",
+                "active": true,
+                "timeZone": "Asia/Hong_Kong"
+              },
+              "body": "Hi Amber, of course but can you clarify what actual source elements you need from me in order to do this.  To get this into my target store I uploaded using Conversion manager to a the stores Collection - from there I added it to the catalogue.  If it is easier I can do this to a particular store for you?\r\n\r\nRegards,\r\n\r\nJohn\r\n",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=johnos",
+                "name": "johnos",
+                "key": "johnos",
+                "emailAddress": "johnos@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "John O'Sullivan",
+                "active": true,
+                "timeZone": "Asia/Hong_Kong"
+              },
+              "created": "2016-08-03T06:21:48.923+0100",
+              "updated": "2016-08-03T06:21:48.923+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/32702",
+              "id": "32702",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+                "name": "amberj",
+                "key": "amberj",
+                "emailAddress": "amberj@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+                },
+                "displayName": "Amber Jay",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "Thanks, [~johnos].  Perhaps it would be easiest if you could do it to a specific store for [~tema@ciklum.com]?  [~tema@ciklum.com] can you let John know which store he should upload the collection to?",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+                "name": "amberj",
+                "key": "amberj",
+                "emailAddress": "amberj@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+                },
+                "displayName": "Amber Jay",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-03T12:15:38.393+0100",
+              "updated": "2016-08-03T12:15:38.393+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/32705",
+              "id": "32705",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~johnos], you can use this store https://vrinfinity.com/cloudlibrary/ui/projects/b0f31b38-5896-44bc-81e3-6047620ae0a5 under Ciklum_Tetiana_Markova / 123456Mt\r\nThank you in advance! ",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-03T12:35:34.005+0100",
+              "updated": "2016-08-03T12:35:34.005+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33134/comment/33213",
+              "id": "33213",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~johnos], hello. When could you help me with reproducing this bug? I mean, uploading your content to store from previous comment ",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-15T12:02:42.640+0100",
+              "updated": "2016-08-15T12:02:42.640+0100"
+            }
+          ],
+          "maxResults": 11,
+          "total": 11,
+          "startAt": 0
+        },
+        "votes": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13115/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "33205",
+      "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/issue/33205",
+      "key": "NG-13126",
+      "fields": {
+        "issuetype": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issuetype/1",
+          "id": "1",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "https://reddotsquare.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10903&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 10903
+        },
+        "timespent": null,
+        "sprint": {
+          "id": 274,
+          "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/274",
+          "state": "active",
+          "name": "Sprint 35 Stingray (PI4)",
+          "startDate": "2016-08-18T12:36:59.381+01:00",
+          "endDate": "2016-08-31T12:36:00.000+01:00",
+          "originBoardId": 28
+        },
+        "project": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/project/10900",
+          "id": "10900",
+          "key": "NG",
+          "name": "Next Gen.",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/projectavatar?pid=10900&avatarId=10011",
+            "24x24": "https://reddotsquare.atlassian.net/secure/projectavatar?size=small&pid=10900&avatarId=10011",
+            "16x16": "https://reddotsquare.atlassian.net/secure/projectavatar?size=xsmall&pid=10900&avatarId=10011",
+            "32x32": "https://reddotsquare.atlassian.net/secure/projectavatar?size=medium&pid=10900&avatarId=10011"
+          },
+          "projectCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/projectCategory/10000",
+            "id": "10000",
+            "description": "",
+            "name": "Core Development"
+          }
+        },
+        "fixVersions": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13000",
+            "id": "13000",
+            "description": "Program increment 4 (June-August 2016), for tracking purposes.",
+            "name": "PI4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13600",
+            "id": "13600",
+            "description": "Fix version for release in PI4",
+            "name": "1.4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          }
+        ],
+        "customfield_11001": null,
+        "aggregatetimespent": null,
+        "resolution": null,
+        "customfield_11003": null,
+        "customfield_11004": null,
+        "customfield_11400": null,
+        "customfield_10500": null,
+        "customfield_10701": null,
+        "customfield_10900": null,
+        "customfield_10901": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "lastViewed": "2016-08-17T09:58:45.302+0100",
+        "watches": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13126/watchers",
+          "watchCount": 4,
+          "isWatching": false
+        },
+        "created": "2016-08-02T11:22:15.000+0100",
+        "customfield_10020": null,
+        "customfield_10021": "Not started",
+        "priority": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/priority/1",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/priorities/blocker.svg",
+          "name": "Blocker",
+          "id": "1"
+        },
+        "customfield_10100": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10100",
+          "value": "Next Gen. Tech.",
+          "id": "10100"
+        },
+        "customfield_10024": null,
+        "customfield_10300": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10300",
+          "value": "Stingray",
+          "id": "10300"
+        },
+        "labels": [
+          "Content",
+          "Feedback-Client/Support/Training",
+          "Lack_of_Requirements",
+          "Navigation"
+        ],
+        "customfield_10016": null,
+        "customfield_11700": null,
+        "customfield_10017": null,
+        "customfield_10018": null,
+        "customfield_11702": null,
+        "customfield_10019": null,
+        "customfield_11701": null,
+        "timeestimate": null,
+        "aggregatetimeoriginalestimate": null,
+        "versions": [],
+        "customfield_11703": null,
+        "issuelinks": [
+          {
+            "id": "34702",
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/issueLink/34702",
+            "type": {
+              "id": "10002",
+              "name": "Duplicate",
+              "inward": "is duplicated by",
+              "outward": "duplicates",
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issueLinkType/10002"
+            },
+            "inwardIssue": {
+              "id": "29873",
+              "key": "NG-12108",
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/29873",
+              "fields": {
+                "summary": "Issue with navigation in a client project",
+                "status": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/status/10000",
+                  "description": "",
+                  "iconUrl": "https://reddotsquare.atlassian.net/images/icons/statuses/closed.png",
+                  "name": "Done",
+                  "id": "10000",
+                  "statusCategory": {
+                    "self": "https://reddotsquare.atlassian.net/rest/api/2/statuscategory/3",
+                    "id": 3,
+                    "key": "done",
+                    "colorName": "green",
+                    "name": "Done"
+                  }
+                },
+                "priority": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/priority/3",
+                  "iconUrl": "https://reddotsquare.atlassian.net/images/icons/priorities/major.svg",
+                  "name": "Major",
+                  "id": "3"
+                },
+                "issuetype": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/issuetype/1",
+                  "id": "1",
+                  "description": "A problem which impairs or prevents the functions of the product.",
+                  "iconUrl": "https://reddotsquare.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10903&avatarType=issuetype",
+                  "name": "Bug",
+                  "subtask": false,
+                  "avatarId": 10903
+                }
+              }
+            }
+          },
+          {
+            "id": "34701",
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/issueLink/34701",
+            "type": {
+              "id": "10003",
+              "name": "Relates",
+              "inward": "relates to",
+              "outward": "relates to",
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issueLinkType/10003"
+            },
+            "inwardIssue": {
+              "id": "29873",
+              "key": "NG-12108",
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/29873",
+              "fields": {
+                "summary": "Issue with navigation in a client project",
+                "status": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/status/10000",
+                  "description": "",
+                  "iconUrl": "https://reddotsquare.atlassian.net/images/icons/statuses/closed.png",
+                  "name": "Done",
+                  "id": "10000",
+                  "statusCategory": {
+                    "self": "https://reddotsquare.atlassian.net/rest/api/2/statuscategory/3",
+                    "id": 3,
+                    "key": "done",
+                    "colorName": "green",
+                    "name": "Done"
+                  }
+                },
+                "priority": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/priority/3",
+                  "iconUrl": "https://reddotsquare.atlassian.net/images/icons/priorities/major.svg",
+                  "name": "Major",
+                  "id": "3"
+                },
+                "issuetype": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/issuetype/1",
+                  "id": "1",
+                  "description": "A problem which impairs or prevents the functions of the product.",
+                  "iconUrl": "https://reddotsquare.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10903&avatarType=issuetype",
+                  "name": "Bug",
+                  "subtask": false,
+                  "avatarId": 10903
+                }
+              }
+            }
+          }
+        ],
+        "assignee": null,
+        "updated": "2016-08-18T13:04:28.000+0100",
+        "status": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/status/10001",
+          "description": "",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/statuses/open.png",
+          "name": "To Do",
+          "id": "10001",
+          "statusCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "components": [],
+        "timeoriginalestimate": null,
+        "description": "Reported by [~johnos] in http://support.vrinfinity.com/helpdesk/tickets/21593\r\n\r\nI’ve just open my scene “Carrefour-Laundry32” and was unable to move – I could only rotate?  I’ve tried reopening and save as and this didn’t fix it.  I’m logged in as “UL_Jack_Shen”\r\n \r\nLast time I was in the scene the same thing happened but I’ve seen this before and restarting the project solved it.  I believe this happened after I changed the material of my asset which was just 1 face which made it disappear.\r\n\r\nScene: Carrefour-Laundry32 (https://vrinfinity.com/cloudlibrary/ui/projects/278701a6-f3a6-40ee-a306-4947dad5af70)\r\nCredentials: UL_KRVR_Support / dXGR5&CJ2I\r\n\r\n[~amberj] has verified that I am unable to move in the scene\r\n\r\n[~johnos] Please can you provide more information about which OBJ and texture you were using?\r\n\r\n*UPDATE (10th Aug)** Adding tdetails from duplicate ticket NG-12108\r\nReported by Greg at GSK in https://krvreu.freshdesk.com/helpdesk/tickets/20584\r\nHe is unable to move (right click and drag). I have replicated this on my computer. Turning is possible, but forward and backward movement is not possible. I checked the base store of Walgreens, and this is functioning as it should.\r\nReproduction steps:\r\nLaunch scene (scene and login credentials reported below). I launched from Chrome\r\ntry to move\r\nexpected result: able to move and turn freely\r\nactual result: unable to move (turning is possible)\r\nI have tried cloning the store, changing the height of the user, and using jump points, but none allow forward and backwards\r\nScenario: Walgreens Demo Store (https://vrinfinity.com/cloudlibrary/ui/projects/a0977151-8ea3-448f-b882-da74ca035125)\r\nGSK_KRVR_Support / Gt9#241djL\r\n",
+        "customfield_11100": null,
+        "customfield_10012": null,
+        "customfield_10013": null,
+        "customfield_10014": null,
+        "customfield_11500": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/11906",
+            "value": "Cloud (Production)",
+            "id": "11906"
+          }
+        ],
+        "timetracking": {},
+        "customfield_10015": null,
+        "customfield_10006": "9223372036854775807",
+        "customfield_10600": null,
+        "customfield_10007": [
+          "com.atlassian.greenhopper.service.sprint.Sprint@e3c3f8[id=265,rapidViewId=28,state=CLOSED,name=Sprint 34 Stingray (PI4),goal=,startDate=2016-08-04T18:09:22.477+01:00,endDate=2016-08-17T18:09:00.000+01:00,completeDate=2016-08-18T12:33:38.530+01:00,sequence=265]",
+          "com.atlassian.greenhopper.service.sprint.Sprint@1783a2d[id=274,rapidViewId=28,state=ACTIVE,name=Sprint 35 Stingray (PI4),goal=Shopping Mode implementation continue,startDate=2016-08-18T12:36:59.381+01:00,endDate=2016-08-31T12:36:00.000+01:00,completeDate=<null>,sequence=274]"
+        ],
+        "customfield_10601": null,
+        "customfield_10008": null,
+        "customfield_10800": [],
+        "attachment": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26156",
+            "id": "26156",
+            "filename": "HHG-SS.mtl",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=johnos",
+              "name": "johnos",
+              "key": "johnos",
+              "emailAddress": "johnos@reddotsquare.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+              },
+              "displayName": "John O'Sullivan",
+              "active": true,
+              "timeZone": "Asia/Hong_Kong"
+            },
+            "created": "2016-08-03T07:29:19.450+0100",
+            "size": 362,
+            "mimeType": "application/octet-stream",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26156/HHG-SS.mtl"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26155",
+            "id": "26155",
+            "filename": "HHG-SS.obj",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=johnos",
+              "name": "johnos",
+              "key": "johnos",
+              "emailAddress": "johnos@reddotsquare.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+              },
+              "displayName": "John O'Sullivan",
+              "active": true,
+              "timeZone": "Asia/Hong_Kong"
+            },
+            "created": "2016-08-03T07:29:18.878+0100",
+            "size": 733,
+            "mimeType": "application/x-tgif",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26155/HHG-SS.obj"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26115",
+            "id": "26115",
+            "filename": "output_log.txt",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+              "name": "tema@ciklum.com",
+              "key": "tema@ciklum.com",
+              "emailAddress": "tema@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+              },
+              "displayName": "Tetiana Markova",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-02T11:36:33.279+0100",
+            "size": 188981,
+            "mimeType": "text/plain",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26115/output_log.txt"
+          }
+        ],
+        "aggregatetimeestimate": null,
+        "flagged": false,
+        "summary": "User unable to move in a specific scene after applying a texture to an OBJ",
+        "creator": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+          "name": "amberj",
+          "key": "amberj",
+          "emailAddress": "amberj@reddotsquare.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+          },
+          "displayName": "Amber Jay",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+          "name": "amberj",
+          "key": "amberj",
+          "emailAddress": "amberj@reddotsquare.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+          },
+          "displayName": "Amber Jay",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "customfield_10000": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "customfield_10001": "2016-08-02T11:41:22.071+0100",
+        "customfield_10200": null,
+        "customfield_10002": null,
+        "customfield_10003": null,
+        "customfield_10400": "1|hzxy1r:yp",
+        "customfield_11600": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1237492",
+        "environment": null,
+        "duedate": null,
+        "closedSprints": [
+          {
+            "id": 265,
+            "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/265",
+            "state": "closed",
+            "name": "Sprint 34 Stingray (PI4)",
+            "startDate": "2016-08-04T18:09:22.477+01:00",
+            "endDate": "2016-08-17T18:09:00.000+01:00",
+            "completeDate": "2016-08-18T12:33:38.530+01:00",
+            "originBoardId": 28
+          }
+        ],
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "comment": {
+          "comments": [
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33205/comment/32633",
+              "id": "32633",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+                "name": "amberj",
+                "key": "amberj",
+                "emailAddress": "amberj@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+                },
+                "displayName": "Amber Jay",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~johnos] - not from [~tema@ciklum.com]:\r\nsuch situation could have a pace, if you 1. create waypoint1 2. move in another point 3. drag to waypoint1 some object 4. jump to waypoint1",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=amberj",
+                "name": "amberj",
+                "key": "amberj",
+                "emailAddress": "amberj@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=amberj&avatarId=13101",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=amberj&avatarId=13101",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=amberj&avatarId=13101",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=amberj&avatarId=13101"
+                },
+                "displayName": "Amber Jay",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-02T11:28:20.565+0100",
+              "updated": "2016-08-02T11:28:20.565+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33205/comment/32635",
+              "id": "32635",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~amberj], I launched this scene and problem is in something else. Cycling trough waypoints doesn't help. \r\nLogs attached  [^output_log.txt] \r\nWe are waiting updates from [~johnos]",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-02T11:41:22.071+0100",
+              "updated": "2016-08-02T11:41:22.071+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33205/comment/32636",
+              "id": "32636",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "It is similar to https://reddotsquare.atlassian.net/browse/NG-12108",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-02T11:42:23.596+0100",
+              "updated": "2016-08-02T11:42:23.596+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33205/comment/32643",
+              "id": "32643",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~johnos], did you add to a scene custom fixture \"HHG-SS\"? it seems like reason for this bug is this fixture. \r\n\r\n{code:java}\r\n<c:scenery uuid=\"b48db004-466f-1a43-a6e7-1735eb2ce458\" forceQuality=\"0\" objectId=\"gen_id_7503\" editable=\"true\" isMerchandisable=\"true\"><t:position x=\"-36.83922\" y=\"0.2521267\" z=\"-41.5534439\"/><t:orientation x=\"0\" y=\"0.707107067\" z=\"0\" w=\"0.7071065\"/><t:scale x=\"NaN\" y=\"1\" z=\"1\"/></c:scenery>\r\n{code}\r\n\r\nIf yes, please add source file of this obj \r\n\r\n",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-02T12:58:17.449+0100",
+              "updated": "2016-08-02T12:58:17.449+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33205/comment/32677",
+              "id": "32677",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=johnos",
+                "name": "johnos",
+                "key": "johnos",
+                "emailAddress": "johnos@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "John O'Sullivan",
+                "active": true,
+                "timeZone": "Asia/Hong_Kong"
+              },
+              "body": "Hi Tetiana, Yes, I also suspected this was the issue.  This asset is an object with just one face and when I applied a white material it disappeared.  Because it disappeared I couldn't think of a way of find it to then delete it - so went back to a previous version and re did the work.  I've since replaced this with a double planed object.  Regards, John",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=johnos",
+                "name": "johnos",
+                "key": "johnos",
+                "emailAddress": "johnos@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "John O'Sullivan",
+                "active": true,
+                "timeZone": "Asia/Hong_Kong"
+              },
+              "created": "2016-08-03T02:43:45.109+0100",
+              "updated": "2016-08-03T02:43:45.109+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33205/comment/32682",
+              "id": "32682",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~johnos], do you have a source file of this asset? And how this asset was uploaded? using asset uploader?",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-03T07:24:21.486+0100",
+              "updated": "2016-08-03T07:24:21.486+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33205/comment/32683",
+              "id": "32683",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=johnos",
+                "name": "johnos",
+                "key": "johnos",
+                "emailAddress": "johnos@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "John O'Sullivan",
+                "active": true,
+                "timeZone": "Asia/Hong_Kong"
+              },
+              "body": "Hi Tetiana, Yes, I've attached above.  It was uploaded in the same way as all other assets - using the Asset Uploader to a particular Unilever collection ( CH-Laundry (Fronts)) and then added to the Menu Catalogue with \"Add from Existing\"",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=johnos",
+                "name": "johnos",
+                "key": "johnos",
+                "emailAddress": "johnos@reddotsquare.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "John O'Sullivan",
+                "active": true,
+                "timeZone": "Asia/Hong_Kong"
+              },
+              "created": "2016-08-03T07:31:33.319+0100",
+              "updated": "2016-08-03T07:31:33.319+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33205/comment/32684",
+              "id": "32684",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~johnos], thank you. \r\nI can reproduce it under my account with different scenes \r\n\r\n*Preconditions* \r\n# Upload attached obj via asset uploader \r\n# Add uploaded obj to MC https://vrinfinity.com/cloudlibrary/uiold/edit/b48db004-466f-1a43-a6e7-1735eb2ce458\r\n\r\n*STR* \r\n# Launch scene  https://vrinfinity.com/cloudlibrary/ui/projects/cd87989b-f841-466e-aa48-ebf47627aadf under Ciklum_Tetiana_Markova / 123456Mt \r\n# Drag obj from catalogue (assets/ fixtures/ custom fixtures/ 12)\r\n# Open properties for new object and close it \r\n\r\n*AcR* User can't navigate \r\n*ExR* User should navigate without problems \r\n\r\n*Note* Width of this obj = 0 ",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-03T07:47:27.719+0100",
+              "updated": "2016-08-03T07:47:27.719+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33205/comment/33212",
+              "id": "33212",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~anka@ciklum.com], please describe how we should work with object, whose height/width/depth =0",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-15T11:57:19.077+0100",
+              "updated": "2016-08-15T11:57:19.077+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33205/comment/33218",
+              "id": "33218",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=anka%40ciklum.com",
+                "name": "anka@ciklum.com",
+                "key": "anka@ciklum.com",
+                "emailAddress": "anka@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=anka%40ciklum.com&avatarId=12800",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=anka%40ciklum.com&avatarId=12800",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=anka%40ciklum.com&avatarId=12800",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=anka%40ciklum.com&avatarId=12800"
+                },
+                "displayName": "Andrii Karabak",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "If there is a field with 0 value, user can't change it. User can select field, change the value, but after unfocusing the value will still be 0.\r\nOn the other hand user can't set 0 value for a field with value higher than 0. The same behavior of UI should be as in previous case.",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=anka%40ciklum.com",
+                "name": "anka@ciklum.com",
+                "key": "anka@ciklum.com",
+                "emailAddress": "anka@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=anka%40ciklum.com&avatarId=12800",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=anka%40ciklum.com&avatarId=12800",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=anka%40ciklum.com&avatarId=12800",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=anka%40ciklum.com&avatarId=12800"
+                },
+                "displayName": "Andrii Karabak",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-15T13:13:01.104+0100",
+              "updated": "2016-08-15T13:13:01.104+0100"
+            }
+          ],
+          "maxResults": 10,
+          "total": 10,
+          "startAt": 0
+        },
+        "votes": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13126/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "33504",
+      "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/issue/33504",
+      "key": "NG-13235",
+      "fields": {
+        "issuetype": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issuetype/1",
+          "id": "1",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "https://reddotsquare.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10903&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 10903
+        },
+        "timespent": null,
+        "sprint": {
+          "id": 274,
+          "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/274",
+          "state": "active",
+          "name": "Sprint 35 Stingray (PI4)",
+          "startDate": "2016-08-18T12:36:59.381+01:00",
+          "endDate": "2016-08-31T12:36:00.000+01:00",
+          "originBoardId": 28
+        },
+        "project": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/project/10900",
+          "id": "10900",
+          "key": "NG",
+          "name": "Next Gen.",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/projectavatar?pid=10900&avatarId=10011",
+            "24x24": "https://reddotsquare.atlassian.net/secure/projectavatar?size=small&pid=10900&avatarId=10011",
+            "16x16": "https://reddotsquare.atlassian.net/secure/projectavatar?size=xsmall&pid=10900&avatarId=10011",
+            "32x32": "https://reddotsquare.atlassian.net/secure/projectavatar?size=medium&pid=10900&avatarId=10011"
+          },
+          "projectCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/projectCategory/10000",
+            "id": "10000",
+            "description": "",
+            "name": "Core Development"
+          }
+        },
+        "fixVersions": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13000",
+            "id": "13000",
+            "description": "Program increment 4 (June-August 2016), for tracking purposes.",
+            "name": "PI4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13600",
+            "id": "13600",
+            "description": "Fix version for release in PI4",
+            "name": "1.4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          }
+        ],
+        "customfield_11001": null,
+        "aggregatetimespent": null,
+        "resolution": null,
+        "customfield_11003": null,
+        "customfield_11004": null,
+        "customfield_11400": null,
+        "customfield_10500": null,
+        "customfield_10701": null,
+        "customfield_10900": null,
+        "customfield_10901": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "lastViewed": "2016-08-20T20:04:38.698+0100",
+        "watches": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13235/watchers",
+          "watchCount": 2,
+          "isWatching": true
+        },
+        "created": "2016-08-09T11:05:12.000+0100",
+        "customfield_10020": null,
+        "customfield_10021": "Not started",
+        "epic": {
+          "id": 16731,
+          "key": "NG-3564",
+          "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/epic/16731",
+          "name": "[Unity] Shopping Mode",
+          "summary": "[Unity] Shopping Mode",
+          "color": {
+            "key": "color_1"
+          },
+          "done": false
+        },
+        "priority": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/priority/4",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/priorities/minor.svg",
+          "name": "Minor",
+          "id": "4"
+        },
+        "customfield_10100": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10100",
+          "value": "Next Gen. Tech.",
+          "id": "10100"
+        },
+        "customfield_10024": null,
+        "customfield_10300": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10300",
+          "value": "Stingray",
+          "id": "10300"
+        },
+        "labels": [],
+        "customfield_10016": null,
+        "customfield_11700": null,
+        "customfield_10017": null,
+        "customfield_10018": null,
+        "customfield_11702": null,
+        "customfield_10019": null,
+        "customfield_11701": null,
+        "timeestimate": null,
+        "aggregatetimeoriginalestimate": null,
+        "versions": [],
+        "customfield_11703": null,
+        "issuelinks": [
+          {
+            "id": "34602",
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/issueLink/34602",
+            "type": {
+              "id": "10003",
+              "name": "Relates",
+              "inward": "relates to",
+              "outward": "relates to",
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issueLinkType/10003"
+            },
+            "inwardIssue": {
+              "id": "28385",
+              "key": "NG-11450",
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/28385",
+              "fields": {
+                "summary": "Research Moderator enters Shopping Mode",
+                "status": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/status/10000",
+                  "description": "",
+                  "iconUrl": "https://reddotsquare.atlassian.net/images/icons/statuses/closed.png",
+                  "name": "Done",
+                  "id": "10000",
+                  "statusCategory": {
+                    "self": "https://reddotsquare.atlassian.net/rest/api/2/statuscategory/3",
+                    "id": 3,
+                    "key": "done",
+                    "colorName": "green",
+                    "name": "Done"
+                  }
+                },
+                "priority": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/priority/3",
+                  "iconUrl": "https://reddotsquare.atlassian.net/images/icons/priorities/major.svg",
+                  "name": "Major",
+                  "id": "3"
+                },
+                "issuetype": {
+                  "self": "https://reddotsquare.atlassian.net/rest/api/2/issuetype/10001",
+                  "id": "10001",
+                  "description": "A user story. Created by JIRA Software - do not edit or delete.",
+                  "iconUrl": "https://reddotsquare.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10915&avatarType=issuetype",
+                  "name": "Story",
+                  "subtask": false,
+                  "avatarId": 10915
+                }
+              }
+            }
+          }
+        ],
+        "assignee": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=ohl",
+          "name": "ohl",
+          "key": "ohl@ciklum.com",
+          "emailAddress": "ohl@ciklum.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=ohl%40ciklum.com&avatarId=13400",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=ohl%40ciklum.com&avatarId=13400",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=ohl%40ciklum.com&avatarId=13400",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=ohl%40ciklum.com&avatarId=13400"
+          },
+          "displayName": "Olha Hlushko",
+          "active": true,
+          "timeZone": "Europe/Kiev"
+        },
+        "updated": "2016-08-20T19:58:19.000+0100",
+        "status": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/status/10001",
+          "description": "",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/statuses/open.png",
+          "name": "To Do",
+          "id": "10001",
+          "statusCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "components": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/component/10205",
+            "id": "10205",
+            "name": "Unity"
+          }
+        ],
+        "timeoriginalestimate": null,
+        "description": "*StR* \r\n# Launch any scene\r\n# Make few bays merchandisable \r\n# Enter shopping mode \r\n\r\n*AcR* bay placeholders are disappeared for a second  \r\n*ExR* bay placeholder should be stayed visible ",
+        "customfield_11100": null,
+        "customfield_10012": null,
+        "customfield_10013": null,
+        "customfield_10014": null,
+        "customfield_11500": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/11901",
+            "value": "QA",
+            "id": "11901"
+          }
+        ],
+        "timetracking": {},
+        "customfield_10015": null,
+        "customfield_10006": "9223372036854775807",
+        "customfield_10600": null,
+        "customfield_10007": [
+          "com.atlassian.greenhopper.service.sprint.Sprint@e3c3f8[id=265,rapidViewId=28,state=CLOSED,name=Sprint 34 Stingray (PI4),goal=,startDate=2016-08-04T18:09:22.477+01:00,endDate=2016-08-17T18:09:00.000+01:00,completeDate=2016-08-18T12:33:38.530+01:00,sequence=265]",
+          "com.atlassian.greenhopper.service.sprint.Sprint@1783a2d[id=274,rapidViewId=28,state=ACTIVE,name=Sprint 35 Stingray (PI4),goal=Shopping Mode implementation continue,startDate=2016-08-18T12:36:59.381+01:00,endDate=2016-08-31T12:36:00.000+01:00,completeDate=<null>,sequence=274]"
+        ],
+        "customfield_10601": null,
+        "customfield_10008": "NG-3564",
+        "customfield_10800": [],
+        "attachment": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26405",
+            "id": "26405",
+            "filename": "2016-08-09 at 13-03-54.mp4",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+              "name": "tema@ciklum.com",
+              "key": "tema@ciklum.com",
+              "emailAddress": "tema@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+              },
+              "displayName": "Tetiana Markova",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-09T11:04:09.971+0100",
+            "size": 575519,
+            "mimeType": "video/mp4",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26405/2016-08-09+at+13-03-54.mp4"
+          }
+        ],
+        "aggregatetimeestimate": null,
+        "flagged": false,
+        "summary": "After entering shopping mode, bay placeholder is disappeared for a second  ",
+        "creator": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+          "name": "tema@ciklum.com",
+          "key": "tema@ciklum.com",
+          "emailAddress": "tema@ciklum.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+          },
+          "displayName": "Tetiana Markova",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+          "name": "tema@ciklum.com",
+          "key": "tema@ciklum.com",
+          "emailAddress": "tema@ciklum.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+          },
+          "displayName": "Tetiana Markova",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "customfield_10000": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "customfield_10001": "2016-08-09T11:09:54.005+0100",
+        "customfield_10200": null,
+        "customfield_10002": null,
+        "customfield_10003": null,
+        "customfield_10400": "1|i005xc:r",
+        "customfield_11600": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@dca0bb",
+        "environment": "https://ci.vrinfinity.com/job/Unity3D/job/Unity3D_qa/36/",
+        "duedate": null,
+        "closedSprints": [
+          {
+            "id": 265,
+            "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/265",
+            "state": "closed",
+            "name": "Sprint 34 Stingray (PI4)",
+            "startDate": "2016-08-04T18:09:22.477+01:00",
+            "endDate": "2016-08-17T18:09:00.000+01:00",
+            "completeDate": "2016-08-18T12:33:38.530+01:00",
+            "originBoardId": 28
+          }
+        ],
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "comment": {
+          "comments": [
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33504/comment/32908",
+              "id": "32908",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=ohl",
+                "name": "ohl",
+                "key": "ohl@ciklum.com",
+                "emailAddress": "ohl@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=ohl%40ciklum.com&avatarId=13400",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=ohl%40ciklum.com&avatarId=13400",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=ohl%40ciklum.com&avatarId=13400",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=ohl%40ciklum.com&avatarId=13400"
+                },
+                "displayName": "Olha Hlushko",
+                "active": true,
+                "timeZone": "Europe/Kiev"
+              },
+              "body": "[~tema@ciklum.com][~anka@ciklum.com] due to technical problems with old architecture i'm not sure we can fix this issue.",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=ohl",
+                "name": "ohl",
+                "key": "ohl@ciklum.com",
+                "emailAddress": "ohl@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=ohl%40ciklum.com&avatarId=13400",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=ohl%40ciklum.com&avatarId=13400",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=ohl%40ciklum.com&avatarId=13400",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=ohl%40ciklum.com&avatarId=13400"
+                },
+                "displayName": "Olha Hlushko",
+                "active": true,
+                "timeZone": "Europe/Kiev"
+              },
+              "created": "2016-08-09T11:09:54.005+0100",
+              "updated": "2016-08-09T11:09:54.005+0100"
+            }
+          ],
+          "maxResults": 1,
+          "total": 1,
+          "startAt": 0
+        },
+        "votes": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13235/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "33701",
+      "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/issue/33701",
+      "key": "NG-13267",
+      "fields": {
+        "issuetype": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issuetype/1",
+          "id": "1",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "https://reddotsquare.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10903&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 10903
+        },
+        "timespent": null,
+        "sprint": {
+          "id": 274,
+          "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/274",
+          "state": "active",
+          "name": "Sprint 35 Stingray (PI4)",
+          "startDate": "2016-08-18T12:36:59.381+01:00",
+          "endDate": "2016-08-31T12:36:00.000+01:00",
+          "originBoardId": 28
+        },
+        "project": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/project/10900",
+          "id": "10900",
+          "key": "NG",
+          "name": "Next Gen.",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/projectavatar?pid=10900&avatarId=10011",
+            "24x24": "https://reddotsquare.atlassian.net/secure/projectavatar?size=small&pid=10900&avatarId=10011",
+            "16x16": "https://reddotsquare.atlassian.net/secure/projectavatar?size=xsmall&pid=10900&avatarId=10011",
+            "32x32": "https://reddotsquare.atlassian.net/secure/projectavatar?size=medium&pid=10900&avatarId=10011"
+          },
+          "projectCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/projectCategory/10000",
+            "id": "10000",
+            "description": "",
+            "name": "Core Development"
+          }
+        },
+        "fixVersions": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13000",
+            "id": "13000",
+            "description": "Program increment 4 (June-August 2016), for tracking purposes.",
+            "name": "PI4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/version/13600",
+            "id": "13600",
+            "description": "Fix version for release in PI4",
+            "name": "1.4",
+            "archived": false,
+            "released": false,
+            "releaseDate": "2016-10-22"
+          }
+        ],
+        "customfield_11001": null,
+        "aggregatetimespent": null,
+        "resolution": null,
+        "customfield_11003": null,
+        "customfield_11004": null,
+        "customfield_11400": null,
+        "customfield_10500": null,
+        "customfield_10701": null,
+        "customfield_10900": null,
+        "customfield_10901": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "lastViewed": null,
+        "watches": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13267/watchers",
+          "watchCount": 2,
+          "isWatching": false
+        },
+        "created": "2016-08-11T09:32:29.000+0100",
+        "customfield_10020": null,
+        "customfield_10021": "Not started",
+        "priority": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/priority/4",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/priorities/minor.svg",
+          "name": "Minor",
+          "id": "4"
+        },
+        "customfield_10100": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10100",
+          "value": "Next Gen. Tech.",
+          "id": "10100"
+        },
+        "customfield_10024": null,
+        "customfield_10300": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/10300",
+          "value": "Stingray",
+          "id": "10300"
+        },
+        "labels": [],
+        "customfield_10016": null,
+        "customfield_11700": null,
+        "customfield_10017": null,
+        "customfield_10018": null,
+        "customfield_11702": null,
+        "customfield_10019": null,
+        "customfield_11701": null,
+        "timeestimate": null,
+        "aggregatetimeoriginalestimate": null,
+        "versions": [],
+        "customfield_11703": null,
+        "issuelinks": [],
+        "assignee": null,
+        "updated": "2016-08-18T13:22:07.000+0100",
+        "status": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/status/10001",
+          "description": "",
+          "iconUrl": "https://reddotsquare.atlassian.net/images/icons/statuses/open.png",
+          "name": "To Do",
+          "id": "10001",
+          "statusCategory": {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        },
+        "components": [],
+        "timeoriginalestimate": null,
+        "description": "*StR* \r\n# Launch scene https://qa.vrinfinity.com/cloudlibrary/ui/projects/2c5bb54e-283b-4772-bfdb-cc061545bc7c under Ciklum_Tetiana_Markova / 123456Mt\r\n# Go to waypoint \"planogram with cuboids\" \r\n# Visualise left planogram (WholeSaleAisle1-Cope)\r\n# Long click on some product \r\n\r\n*AcR* there is number 2 on this texture  !Screenshot_872.png|thumbnail! \r\n*ExR* there should be only letter \"L\"\r\n",
+        "customfield_11100": null,
+        "customfield_10012": null,
+        "customfield_10013": null,
+        "customfield_10014": null,
+        "customfield_11500": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/customFieldOption/11901",
+            "value": "QA",
+            "id": "11901"
+          }
+        ],
+        "timetracking": {},
+        "customfield_10015": null,
+        "customfield_10006": "9223372036854775807",
+        "customfield_10600": null,
+        "customfield_10007": [
+          "com.atlassian.greenhopper.service.sprint.Sprint@e3c3f8[id=265,rapidViewId=28,state=CLOSED,name=Sprint 34 Stingray (PI4),goal=,startDate=2016-08-04T18:09:22.477+01:00,endDate=2016-08-17T18:09:00.000+01:00,completeDate=2016-08-18T12:33:38.530+01:00,sequence=265]",
+          "com.atlassian.greenhopper.service.sprint.Sprint@1783a2d[id=274,rapidViewId=28,state=ACTIVE,name=Sprint 35 Stingray (PI4),goal=Shopping Mode implementation continue,startDate=2016-08-18T12:36:59.381+01:00,endDate=2016-08-31T12:36:00.000+01:00,completeDate=<null>,sequence=274]"
+        ],
+        "customfield_10601": null,
+        "customfield_10008": null,
+        "customfield_10800": [],
+        "attachment": [
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26908",
+            "id": "26908",
+            "filename": "dummyfront.png",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=andreyk_rds",
+              "name": "andreyk_rds",
+              "key": "andreyk_rds",
+              "emailAddress": "aku@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10113",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10113",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10113",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10113"
+              },
+              "displayName": "Andrey Kukharenko",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-17T11:51:13.979+0100",
+            "size": 1519,
+            "mimeType": "image/png",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26908/dummyfront.png",
+            "thumbnail": "https://reddotsquare.atlassian.net/secure/thumbnail/26908/_thumb_26908.png"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26907",
+            "id": "26907",
+            "filename": "dummyleft.png",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=andreyk_rds",
+              "name": "andreyk_rds",
+              "key": "andreyk_rds",
+              "emailAddress": "aku@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10113",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10113",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10113",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10113"
+              },
+              "displayName": "Andrey Kukharenko",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-17T11:51:13.839+0100",
+            "size": 1566,
+            "mimeType": "image/png",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26907/dummyleft.png",
+            "thumbnail": "https://reddotsquare.atlassian.net/secure/thumbnail/26907/_thumb_26907.png"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26906",
+            "id": "26906",
+            "filename": "dummyright.png",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=andreyk_rds",
+              "name": "andreyk_rds",
+              "key": "andreyk_rds",
+              "emailAddress": "aku@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10113",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10113",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10113",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10113"
+              },
+              "displayName": "Andrey Kukharenko",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-17T11:51:13.746+0100",
+            "size": 2634,
+            "mimeType": "image/png",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26906/dummyright.png",
+            "thumbnail": "https://reddotsquare.atlassian.net/secure/thumbnail/26906/_thumb_26906.png"
+          },
+          {
+            "self": "https://reddotsquare.atlassian.net/rest/api/2/attachment/26602",
+            "id": "26602",
+            "filename": "Screenshot_872.png",
+            "author": {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+              "name": "tema@ciklum.com",
+              "key": "tema@ciklum.com",
+              "emailAddress": "tema@ciklum.com",
+              "avatarUrls": {
+                "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+              },
+              "displayName": "Tetiana Markova",
+              "active": true,
+              "timeZone": "Europe/London"
+            },
+            "created": "2016-08-11T09:32:25.563+0100",
+            "size": 110741,
+            "mimeType": "image/png",
+            "content": "https://reddotsquare.atlassian.net/secure/attachment/26602/Screenshot_872.png",
+            "thumbnail": "https://reddotsquare.atlassian.net/secure/thumbnail/26602/_thumb_26602.png"
+          }
+        ],
+        "aggregatetimeestimate": null,
+        "flagged": false,
+        "summary": "Need to change default texture (left side) for cuboid ",
+        "creator": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+          "name": "tema@ciklum.com",
+          "key": "tema@ciklum.com",
+          "emailAddress": "tema@ciklum.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+          },
+          "displayName": "Tetiana Markova",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+          "name": "tema@ciklum.com",
+          "key": "tema@ciklum.com",
+          "emailAddress": "tema@ciklum.com",
+          "avatarUrls": {
+            "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+            "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+            "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+            "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+          },
+          "displayName": "Tetiana Markova",
+          "active": true,
+          "timeZone": "Europe/London"
+        },
+        "customfield_10000": null,
+        "aggregateprogress": {
+          "progress": 0,
+          "total": 0
+        },
+        "customfield_10001": "2016-08-17T11:58:54.051+0100",
+        "customfield_10200": null,
+        "customfield_10002": null,
+        "customfield_10003": null,
+        "customfield_10400": "1|i005xc:v",
+        "customfield_11600": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@3299dc",
+        "environment": "https://ci.vrinfinity.com/job/Unity3D/job/Unity3D_qa/37/",
+        "duedate": null,
+        "closedSprints": [
+          {
+            "id": 265,
+            "self": "https://reddotsquare.atlassian.net/rest/agile/1.0/sprint/265",
+            "state": "closed",
+            "name": "Sprint 34 Stingray (PI4)",
+            "startDate": "2016-08-04T18:09:22.477+01:00",
+            "endDate": "2016-08-17T18:09:00.000+01:00",
+            "completeDate": "2016-08-18T12:33:38.530+01:00",
+            "originBoardId": 28
+          }
+        ],
+        "progress": {
+          "progress": 0,
+          "total": 0
+        },
+        "comment": {
+          "comments": [
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33701/comment/33306",
+              "id": "33306",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~andreyk_rds], please provide us source texture, that you used. Or please write font type and size ",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-16T10:13:17.605+0100",
+              "updated": "2016-08-16T10:13:17.605+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33701/comment/33410",
+              "id": "33410",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=andreyk_rds",
+                "name": "andreyk_rds",
+                "key": "andreyk_rds",
+                "emailAddress": "aku@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10113",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10113",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10113",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10113"
+                },
+                "displayName": "Andrey Kukharenko",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "The bug related also to Font and Right side of cuboid. I attached edited texture of cuboid side to the task, and the files need copy to folder in ....\\Unity-app\\MainApplication\\Assets\\Resources\\",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=andreyk_rds",
+                "name": "andreyk_rds",
+                "key": "andreyk_rds",
+                "emailAddress": "aku@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10113",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10113",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10113",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10113"
+                },
+                "displayName": "Andrey Kukharenko",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-17T11:58:54.051+0100",
+              "updated": "2016-08-17T11:58:54.051+0100"
+            },
+            {
+              "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/33701/comment/33411",
+              "id": "33411",
+              "author": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "body": "[~poli@ciklum.com], could you help us with this issue? ",
+              "updateAuthor": {
+                "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=tema%40ciklum.com",
+                "name": "tema@ciklum.com",
+                "key": "tema@ciklum.com",
+                "emailAddress": "tema@ciklum.com",
+                "avatarUrls": {
+                  "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?avatarId=10122",
+                  "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&avatarId=10122",
+                  "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&avatarId=10122",
+                  "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&avatarId=10122"
+                },
+                "displayName": "Tetiana Markova",
+                "active": true,
+                "timeZone": "Europe/London"
+              },
+              "created": "2016-08-17T12:07:20.784+0100",
+              "updated": "2016-08-17T12:07:20.784+0100"
+            }
+          ],
+          "maxResults": 3,
+          "total": 3,
+          "startAt": 0
+        },
+        "votes": {
+          "self": "https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13267/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        }
+      }
+    }
+  ]
+}

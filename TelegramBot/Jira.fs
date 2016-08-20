@@ -1,18 +1,32 @@
 ﻿namespace Shkoda.Telegram.Bot
 module Jira = 
     open Option
+    open Operators
+            //active sprint https://reddotsquare.atlassian.net/rest/agile/1.0/board/28/sprint?state=active
+        // https://reddotsquare.atlassian.net/rest/agile/1.0/board/28/sprint/274/issue?jql=(assignee=currentuser() OR assignee=null) AND status not in ("To review", "QA Ready", "Done") 
 
     let userinfo (config:Json.UserConfig.Jira) = 
         let searchUserEndpoint = sprintf "/rest/api/2/myself" 
         let url = config.Url + searchUserEndpoint
-        let toString (user: Json.JiraSearchUser.Root option) = 
-            match user with
-            |Some data -> TelegramMarkdown.jiraUserAsString data
-            |None -> sprintf "jira user %s not found for %s" config.Email config.Url
 
         Http.authorizedRequest url config.Email config.Password 
         |> bind (Json.JiraSearchUser.Parse >> Some) 
-        |> toString
+        |> TelegramMarkdown.jiraUserAsString
 
-        //active sprint https://reddotsquare.atlassian.net/rest/agile/1.0/board/28/sprint?state=active
-        // https://reddotsquare.atlassian.net/rest/agile/1.0/board/28/sprint/274/issue?jql=(assignee=currentuser() OR assignee=null) AND status not in ("To review", "QA Ready", "Done") 
+    let getActiveSprintId (config:Json.UserConfig.Jira) =      
+        let url = sprintf "https://reddotsquare.atlassian.net/rest/agile/1.0/board/%i/sprint?state=active" config.BoardId
+        Http.authorizedRequest url config.Email config.Password 
+        |> bind (Json.ActiveSprintResponse.Parse >> Json.activeSprintId)
+
+
+
+    let getNotClosedIssuesFromSprint (config:Json.UserConfig.Jira) (sprintId)= 
+        let url = sprintf "https://reddotsquare.atlassian.net/rest/agile/1.0/board/%i/sprint/%i/issue?jql=(assignee=currentuser() OR assignee=null) AND status not in (\"To review\", \"QA Ready\", \"Done\") " config.BoardId sprintId
+        Http.authorizedRequest url config.Email config.Password 
+        |> bind (Json.ActiveIssuesResponse.Parse >> Some) 
+
+    let getNotClosedIssuesCurrentSprint (config:Json.UserConfig.Jira) = 
+     match (getActiveSprintId (config)) with
+     | Some id -> getNotClosedIssuesFromSprint config id
+     | None -> None
+

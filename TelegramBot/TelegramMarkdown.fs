@@ -56,10 +56,43 @@ module TelegramMarkdown =
 
         jiraConfigAsString + bitbucketAsString
 
-    let jiraUserAsString (user:Json.JiraSearchUser.Root) = 
-        let a = sprintf "*Jira profile:*\nusername:    %s\nfull name:    %s\nemail:    %s" 
-                    user.Name user.DisplayName user.EmailAddress
-        a
+    let jiraUserAsString (user:Json.JiraSearchUser.Root option) = 
+        match user with
+        | Some data -> sprintf "*Jira profile:*\nusername:    %s\nfull name:    %s\nemail:    %s" 
+                            data.Name data.DisplayName data.EmailAddress
+        | None -> sprintf "jira user not found"
+
+    let sortIssuesByAssignee (i1:Json.ActiveIssuesResponse.Issue)(i2:Json.ActiveIssuesResponse.Issue) = 
+       match i1.Fields.Assignee, i2.Fields.Assignee with
+       |None, None -> 0
+       |Some _, None -> -1
+       |None, Some _ -> 1
+       |Some s1, Some s2 -> compare s1.DisplayName s2.DisplayName
+
+    let issuesToString (response:Json.ActiveIssuesResponse.Root option) =   
+        let toString (issue: Json.ActiveIssuesResponse.Issue) = 
+            let url = jiraTaskRootUrl + issue.Key
+            let text = issue.Fields.Summary  
+            let status = issue.Fields.Status.Name 
+            sprintf "[%s](%s) %s -- _%s_\n"  issue.Key url text status
+
+        let assignedIssues (issues : Json.ActiveIssuesResponse.Issue[]) = 
+            issues
+            |> Array.filter (fun i -> i.Fields.Assignee.IsSome)
+            |> Array.map toString
+            |> String.Concat 
+        let unassignedIssues (issues : Json.ActiveIssuesResponse.Issue[]) = 
+            issues
+            |> Array.filter (fun i -> i.Fields.Assignee.IsNone)
+            |> Array.map toString
+            |> String.Concat 
+
+        let issuestoString (issues : Json.ActiveIssuesResponse.Issue[]) = 
+            sprintf "*Assigned to you:*\n%s\n*Unassigned:*\n%s" (assignedIssues issues) (unassignedIssues issues)
+
+        match response with
+        |Some issues -> issuestoString issues.Issues
+        |None -> "Issues not found"
 
 
 

@@ -12,6 +12,7 @@
   "jira": {
     "email": "ohl@ciklum.com",
     "password": "121bbb",
-    "url" : "https://reddotsquare.atlassian.net"
+    "url" : "https://reddotsquare.atlassian.net",
+	"board_id" : 28
   }
 }
