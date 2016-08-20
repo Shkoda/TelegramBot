@@ -20,6 +20,7 @@ module Telegram =
   let updateEndpoint token =  endpoint token "getUpdates"
   let sendMessageEndpoint token =  endpoint token "sendMessage"
   let editInlineKeyboardEndpoint token = endpoint token "editMessageReplyMarkup"
+  let editMessageEndpoint token = endpoint token "editMessageText"
 
 
   let nextOffset (results:Json.Update.Result[]) = 
@@ -97,16 +98,15 @@ module Telegram =
     | :? System.Net.WebException as ex-> printfn "%s Telegram.fs:(%s) %s" HTTPEXN __LINE__  ex.Message|> ignore
     | _-> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
 
-  let showConfigurableInlineKeyboard chatId (strings:string[]) = 
-     let url  = sendMessageEndpoint TOKEN 
-     let buttonRow text = sprintf "[{\"text\": \"%s\", \"callback_data\": \"%s\"}]" text text
-     let keyboard (texts:string[]) = 
-      //  let buttons = texts |> Array.map buttonRow
+  let inlineKeyboard (texts:string[]) = 
+        let buttonRow text = sprintf "[{\"text\": \"%s\", \"callback_data\": \"%s\"}]" text text
         let row = sprintf "[%s]" (String.concat "," (texts |> Array.map buttonRow))
         sprintf "{\"inline_keyboard\":%s}" (row)
-
+  
+  let showConfigurableInlineKeyboard chatId (strings:string[]) = 
+     let url  = sendMessageEndpoint TOKEN     
      try
-        let markup = keyboard strings
+        let markup = inlineKeyboard strings
         Http.RequestString (url, 
             query=[
                 "chat_id", chatId.ToString(); 
@@ -119,12 +119,25 @@ module Telegram =
         | :? System.Net.WebException as ex-> printfn "%s Telegram.fs:(%s) %s" HTTPEXN __LINE__  ex.Message|> ignore
         | _-> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
 
+  let editInlineKeyboard chatId messageId keyboard = 
+    let url  = editInlineKeyboardEndpoint TOKEN 
+    try
+          Http.RequestString (url, query=["chat_id", chatId.ToString(); "message_id", messageId.ToString(); "reply_markup", keyboard]) |> ignore 
+    with
+          | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
+          | _                          -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
 
   let hideInlineKeyboard chatId messageId =
-     let url  = editInlineKeyboardEndpoint TOKEN 
-     try
-          Http.RequestString (url, query=["chat_id", chatId.ToString(); "message_id", messageId.ToString(); "reply_markup", ""]) |> ignore 
-     with
+     editInlineKeyboard chatId messageId ""
+
+  let overrideInlineKeyboard chatId messageId (strings:string[]) = 
+    editInlineKeyboard chatId messageId (inlineKeyboard strings)
+
+  let editMessage chatId messageId newText = 
+    let url  = editMessageEndpoint TOKEN 
+    try
+          Http.RequestString (url, query=["chat_id", chatId.ToString(); "message_id", messageId.ToString(); "text", newText]) |> ignore 
+    with
           | :? System.Net.WebException -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
           | _                          -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
     

@@ -21,7 +21,11 @@ module CommandHandler =
         | _ -> reply (sprintf "I don't know %s command, %s" command firstname)
     
     let handleInlineResponse (response: Json.Update.CallbackQuery) = 
-        Telegram.hideInlineKeyboard response.Message.Chat.Id response.Message.MessageId
+        let randomString = fun () ->
+            let r = System.Random()
+            sprintf "%i"(r.Next())
+        Telegram.editMessage response.Message.Chat.Id response.Message.MessageId (randomString())
+        Telegram.overrideInlineKeyboard response.Message.Chat.Id response.Message.MessageId [|(randomString()); (randomString())|]
 
     let handle (update : Json.Update.Result) =
         let reply text = Telegram.sendMessage (Json.chatId update) text
