@@ -1,12 +1,17 @@
 {
-	"bitbucket":{
-		"email" : "mail@ciklum.com",
-		"password" : "asdqwe",
-		"repositories":[
-		  {
-		    "owner" : "reddotsquaresolutions",
-		    "name" : "unity-cuttlefish"
-		  }
-		] 
-	}
+  "bitbucket": {
+    "email": "ohl@ciklum.com",
+    "password": "121aaa",
+    "repositories": [
+      {
+        "owner": "reddotsquaresolutions",
+        "name": "unity-cuttlefish"
+      }
+    ]
+  },
+  "jira": {
+    "email": "ohl@ciklum.com",
+    "password": "121bbb",
+    "url" : "https://reddotsquare.atlassian.net"
+  }
 }

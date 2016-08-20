@@ -6,6 +6,7 @@ module Json =
     type Update = JsonProvider<"../data/update.json">
     type CommitsResponse = JsonProvider<"../data/commits_sample.json">
     type UserConfig = JsonProvider<"../data/user_config_sample.json">
+    type JiraSearchUser = JsonProvider<"../data/jira_user.json">
 
     let (|UserMessage|InlineResponce|UnknownFormat|) (update:Update.Result) = 
         match update with

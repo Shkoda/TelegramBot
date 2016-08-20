@@ -58,9 +58,11 @@
     <None Include="App.config" />
     <Content Include="packages.config" />
     <Compile Include="Json.fs" />
+    <Compile Include="Http.fs" />
     <Compile Include="UserConfigProvider.fs" />
     <Compile Include="TelegramMarkdown.fs" />
     <Compile Include="BitBucket.fs" />
+    <Compile Include="Jira.fs" />
     <Compile Include="Telegram.fs" />
     <Compile Include="CommandParser.fs" />
     <Compile Include="CommandHandler.fs" />

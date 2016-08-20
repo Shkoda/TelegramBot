@@ -1,27 +1,14 @@
 ﻿namespace Shkoda.Telegram.Bot
 module BitBucket =
-    open FSharp.Data
-    open System
-    open System.Text
 
     let bitbucketApiUrl = "https://api.bitbucket.org/2.0/"
     let cuttlefishCommitsUrl = bitbucketApiUrl + "repositories/reddotsquaresolutions/unity-cuttlefish/commits?page="
     let userInfoUrl = bitbucketApiUrl + "user"
    
-    let basicAuthHeaderValue (username:string) (password:string) = 
-        let base64Encode (s: string) = 
-            Convert.ToBase64String(Encoding.UTF8.GetBytes(s))
-        sprintf "%s:%s" username password |> base64Encode |> sprintf "Basic %s"
-
-    let authorizedRequest url email password = 
-        try
-            Http.RequestString (url,  headers = ["Authorization", basicAuthHeaderValue email password]) |> Some
-        with 
-        | ex -> printf "AuthorizedRequest exception: %s" ex.Message; None 
 
     let getCommitsFromPage page email pass=
          let url = sprintf "%s%i"cuttlefishCommitsUrl page
-         authorizedRequest url email pass
+         Http.authorizedRequest url email pass
         
     let getCommitList email pass = 
         let isAuthor (email:string)(commit:Json.CommitsResponse.Value) = 
@@ -41,7 +28,7 @@ module BitBucket =
                 |> Some
             |None -> None
     let isValidConfig (config: Json.UserConfig.Root) = 
-        let auth = authorizedRequest userInfoUrl config.Bitbucket.Email config.Bitbucket.Password
+        let auth =  Http.authorizedRequest userInfoUrl config.Bitbucket.Email config.Bitbucket.Password
         auth.IsSome
 
     let getUserCommits (config: Json.UserConfig.Root) = 
@@ -59,10 +46,10 @@ module BitBucket =
     let setLogin (sender:string)(args:string[]) = 
         match args.Length with
         | 0 -> "/setlogin should have one argument"
-        | _ -> sprintf "Login was updated. Current credentials:\n\n%s" (TelegramMarkdown.userAsString(UserConfigProvider.saveEmail sender args.[0]))
+        | _ -> sprintf "Login was updated. Current credentials:\n\n%s" (TelegramMarkdown.credentialsAsString(UserConfigProvider.saveEmail sender args.[0]))
 
     let setPassword (sender:string)(args:string[]) = 
         match args.Length with
         | 0 -> "/setpass should have one argument"
-        | _ -> sprintf "Password was updated. Current credentials:\n\n%s" (TelegramMarkdown.userAsString(UserConfigProvider.savePassword sender args.[0]))
+        | _ -> sprintf "Password was updated. Current credentials:\n\n%s" (TelegramMarkdown.credentialsAsString(UserConfigProvider.savePassword sender args.[0]))
 

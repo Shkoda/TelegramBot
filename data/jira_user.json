@@ -1,0 +1,18 @@
+[
+  {
+    "self": "https://reddotsquare.atlassian.net/rest/api/2/user?username=ohl",
+    "key": "ohl@ciklum.com",
+    "name": "ohl",
+    "emailAddress": "ohl@ciklum.com",
+    "avatarUrls": {
+      "16x16": "https://reddotsquare.atlassian.net/secure/useravatar?size=xsmall&ownerId=ohl%40ciklum.com&avatarId=13400",
+      "24x24": "https://reddotsquare.atlassian.net/secure/useravatar?size=small&ownerId=ohl%40ciklum.com&avatarId=13400",
+      "32x32": "https://reddotsquare.atlassian.net/secure/useravatar?size=medium&ownerId=ohl%40ciklum.com&avatarId=13400",
+      "48x48": "https://reddotsquare.atlassian.net/secure/useravatar?ownerId=ohl%40ciklum.com&avatarId=13400"
+    },
+    "displayName": "Olha Hlushko",
+    "active": true,
+    "timeZone": "Europe/Kiev",
+    "locale": "en_US"
+  }
+]

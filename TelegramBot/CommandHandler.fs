@@ -12,10 +12,10 @@ module CommandHandler =
         |"/k" -> Telegram.showKeyboard chatId ("i'm trying to show keyboard, " + firstname)
         |"/h" -> Telegram.hideKeyboard chatId ("i'm trying to hide keyboard, " + firstname)
         |"/ik" ->  Telegram.showInlineKeyboard chatId ("i'm trying to show inline keyboard, " + firstname)
-        |"/creds" -> reply (TelegramMarkdown.userAsString(UserConfigProvider.getUser(sender)))
+        |"/creds" -> reply (TelegramMarkdown.credentialsAsString(UserConfigProvider.getUser(sender)))
         |"/setlogin" |"/setl" |"/setemail" -> reply (BitBucket.setLogin sender args)
         |"/setpass" |"/setpassword" |"/setp" -> reply (BitBucket.setPassword sender args)
-
+        |"/jirauser" -> reply (Jira.userinfo (UserConfigProvider.getUser(sender).Jira))
         | _ -> reply (sprintf "I don't know %s command, %s" command firstname)
 
     let handle (update : Json.Update.Result) =
