@@ -60,7 +60,6 @@
     <Compile Include="Json.fs" />
     <Compile Include="UserConfigProvider.fs" />
     <Compile Include="TelegramMarkdown.fs" />
-    <Compile Include="HttpServer.fs" />
     <Compile Include="BitBucket.fs" />
     <Compile Include="Telegram.fs" />
     <Compile Include="CommandParser.fs" />

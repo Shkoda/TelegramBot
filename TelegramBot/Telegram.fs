@@ -20,12 +20,6 @@ module Telegram =
   let updateEndpoint token =  endpoint token "getUpdates"
   let sendMessageEndpoint token =  endpoint token "sendMessage"
 
-  let (|Message|InlineResponce|UnknownFormat|) (update:Json.Update.Result) = 
-        match update with
-        |u when u.Message.IsSome -> Message (u.Message.Value)
-        |u when u.CallbackQuery.IsSome -> InlineResponce (u.CallbackQuery.Value)
-        |_ -> UnknownFormat (update)
-
 
   let nextOffset (results:Json.Update.Result[]) = 
      let updateId (result: Json.Update.Result) = result.UpdateId    

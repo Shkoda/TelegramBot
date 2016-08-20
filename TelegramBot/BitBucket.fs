@@ -56,3 +56,13 @@ module BitBucket =
         let credentials = UserConfigProvider.getUser telegramUsername
         getUserCommits credentials
 
+    let setLogin (sender:string)(args:string[]) = 
+        match args.Length with
+        | 0 -> "/setlogin should have one argument"
+        | _ -> sprintf "Login was updated. Current credentials:\n\n%s" (TelegramMarkdown.userAsString(UserConfigProvider.saveEmail sender args.[0]))
+
+    let setPassword (sender:string)(args:string[]) = 
+        match args.Length with
+        | 0 -> "/setpass should have one argument"
+        | _ -> sprintf "Password was updated. Current credentials:\n\n%s" (TelegramMarkdown.userAsString(UserConfigProvider.savePassword sender args.[0]))
+
