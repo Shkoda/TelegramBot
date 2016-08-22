@@ -58,6 +58,7 @@
     <None Include="App.config" />
     <Content Include="packages.config" />
     <Compile Include="Json.fs" />
+    <Compile Include="DataClasses.fs" />
     <Compile Include="Http.fs" />
     <Compile Include="UserConfigProvider.fs" />
     <Compile Include="TelegramMarkdown.fs" />

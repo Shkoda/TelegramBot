@@ -9,15 +9,15 @@ module CommandHandler =
         match command with
         |"/hi"|"/hello" -> reply ("Nice to meet you, " + firstname)
         |"/git" -> reply (BitBucket.getCommitStatistics (sender))
-        |"/k" -> Telegram.showKeyboard chatId ("i'm trying to show keyboard, " + firstname)
-        |"/h" -> Telegram.hideKeyboard chatId ("i'm trying to hide keyboard, " + firstname)
+        |"/k" -> Telegram.showReplyMarkupKeyboard chatId ("i'm trying to show keyboard, " + firstname)
+        |"/h" -> Telegram.hideReplyMarkupKeyboard chatId ("i'm trying to hide keyboard, " + firstname)
         |"/ik" ->  Telegram.showInlineKeyboard chatId ("i'm trying to show inline keyboard, " + firstname)
         |"/creds" -> reply (TelegramMarkdown.credentialsAsString(UserConfigProvider.getUser(sender)))
         |"/setlogin" |"/setl" |"/setemail" -> reply (BitBucket.setLogin sender args)
         |"/setpass" |"/setpassword" |"/setp" -> reply (BitBucket.setPassword sender args)
         |"/jirauser" -> reply (Jira.userinfo (UserConfigProvider.getUser(sender).Jira))
         |"/issues" -> reply (TelegramMarkdown.issuesToString(Jira.getNotClosedIssuesCurrentSprint (UserConfigProvider.getUser(sender).Jira)))
-        |"/ik2" -> Telegram.showConfigurableInlineKeyboard chatId [|"aa"; "bb"|]
+        |"/ik2" -> Telegram.showConfigurableInlineKeyboard chatId [| [|{text = "a"; callback="ca"} |]; [|{text = "b"; callback="cb"} |]|]
         | _ -> reply (sprintf "I don't know %s command, %s" command firstname)
     
     let handleInlineResponse (response: Json.Update.CallbackQuery) = 
@@ -25,7 +25,8 @@ module CommandHandler =
             let r = System.Random()
             sprintf "%i"(r.Next())
         Telegram.editMessage response.Message.Chat.Id response.Message.MessageId (randomString())
-        Telegram.overrideInlineKeyboard response.Message.Chat.Id response.Message.MessageId [|(randomString()); (randomString())|]
+        Telegram.overrideInlineKeyboard response.Message.Chat.Id response.Message.MessageId 
+            [| [|{text = randomString(); callback="ca"} |]; [|{text = randomString(); callback="cb"} |]|] 
 
     let handle (update : Json.Update.Result) =
         let reply text = Telegram.sendMessage (Json.chatId update) text

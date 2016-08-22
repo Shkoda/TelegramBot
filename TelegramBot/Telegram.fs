@@ -58,7 +58,7 @@ module Telegram =
           | _                          -> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
       sendMessage TOKEN chatId text
 
-  let showKeyboard chatId text =
+  let showReplyMarkupKeyboard chatId text =
     let url  = sendMessageEndpoint TOKEN 
     try
         let keyboard =  "{\"keyboard\":[[\"Hello\"], [\"Sun\", \"Moon\"], [\"11\",\"22\",\"33\",\"44\",\"55\"]], \"one_time_keyboard\": true,\"resize_keyboard\": true}"
@@ -73,7 +73,7 @@ module Telegram =
     | :? System.Net.WebException as ex-> printfn "%s Telegram.fs:(%s) %s" HTTPEXN __LINE__  ex.Message|> ignore
     | _-> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
 
-  let hideKeyboard chatId text = 
+  let hideReplyMarkupKeyboard chatId text = 
     try
         Http.RequestString (sendMessageEndpoint TOKEN, 
              query=["chat_id", chatId.ToString(); "text", text; "reply_markup", "{\"hide_keyboard\":true}";])|> ignore 
@@ -98,15 +98,20 @@ module Telegram =
     | :? System.Net.WebException as ex-> printfn "%s Telegram.fs:(%s) %s" HTTPEXN __LINE__  ex.Message|> ignore
     | _-> printfn "%s (%s)" HTTPEXN __LINE__ |> ignore
 
-  let inlineKeyboard (texts:string[]) = 
-        let buttonRow text = sprintf "[{\"text\": \"%s\", \"callback_data\": \"%s\"}]" text text
-        let row = sprintf "[%s]" (String.concat "," (texts |> Array.map buttonRow))
-        sprintf "{\"inline_keyboard\":%s}" (row)
+  let toInlineLeyboard (buttons: DataClasses.InlineButton[][]) = 
+    let buttonMarkup (button: DataClasses.InlineButton) = 
+       sprintf "{\"text\": \"%s\", \"callback_data\": \"%s\"}" button.text button.callback
+    let rowMarkup (buttons:DataClasses.InlineButton[]) = 
+       sprintf "[%s]" (String.concat "," (buttons |> Array.map buttonMarkup))
+    let keyboardMarkup (buttons: DataClasses.InlineButton[][]) = 
+       sprintf "[%s]" (String.concat "," (buttons |> Array.map rowMarkup))
+    sprintf "{\"inline_keyboard\":%s}" (keyboardMarkup buttons)
+    
   
-  let showConfigurableInlineKeyboard chatId (strings:string[]) = 
+  let showConfigurableInlineKeyboard chatId (buttons: DataClasses.InlineButton[][]) = 
      let url  = sendMessageEndpoint TOKEN     
      try
-        let markup = inlineKeyboard strings
+        let markup = toInlineLeyboard buttons
         Http.RequestString (url, 
             query=[
                 "chat_id", chatId.ToString(); 
@@ -130,8 +135,8 @@ module Telegram =
   let hideInlineKeyboard chatId messageId =
      editInlineKeyboard chatId messageId ""
 
-  let overrideInlineKeyboard chatId messageId (strings:string[]) = 
-    editInlineKeyboard chatId messageId (inlineKeyboard strings)
+  let overrideInlineKeyboard chatId messageId (buttons: DataClasses.InlineButton[][]) = 
+    editInlineKeyboard chatId messageId (toInlineLeyboard buttons)
 
   let editMessage chatId messageId newText = 
     let url  = editMessageEndpoint TOKEN 
