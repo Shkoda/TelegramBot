@@ -16,7 +16,6 @@ module UserConfigProvider =
     let userCredentialsPath telegramUsername = credentialsFolder + telegramUsername 
 
     let isKnownUser telegramUsername = File.Exists(userCredentialsPath telegramUsername)
-
         
     let saveUserBitbucketCredentials telegramUsername email password repoOwner repoName = 
         createCredentialsFolderifNotExist
@@ -34,8 +33,7 @@ module UserConfigProvider =
 
     let saveEmail telegramUsername email = 
         let credentials = getUser telegramUsername
-        saveUserBitbucketCredentials telegramUsername email credentials.Bitbucket.Password credentials.Bitbucket.Repositories.[0].Owner credentials.Bitbucket.Repositories.[0].Name
-        
+        saveUserBitbucketCredentials telegramUsername email credentials.Bitbucket.Password credentials.Bitbucket.Repositories.[0].Owner credentials.Bitbucket.Repositories.[0].Name        
 
     let savePassword telegramUsername password = 
         let credentials = getUser telegramUsername

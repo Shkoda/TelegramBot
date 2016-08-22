@@ -62,45 +62,42 @@ module TelegramMarkdown =
                             data.Name data.DisplayName data.EmailAddress
         | None -> sprintf "jira user not found"
 
-    let sortIssuesByAssignee (i1:Json.ActiveIssuesResponse.Issue)(i2:Json.ActiveIssuesResponse.Issue) = 
-       match i1.Fields.Assignee, i2.Fields.Assignee with
-       |None, None -> 0
-       |Some _, None -> -1
-       |None, Some _ -> 1
-       |Some s1, Some s2 -> compare s1.DisplayName s2.DisplayName
-
     let issuesToString (response:Json.ActiveIssuesResponse.Root option) =   
-        let toString (issue: Json.ActiveIssuesResponse.Issue) = 
+        let issueToString (issue: Json.ActiveIssuesResponse.Issue) = 
             let url = jiraTaskRootUrl + issue.Key
             let text = issue.Fields.Summary  
             let status = issue.Fields.Status.Name 
             sprintf "[%s](%s) %s -- _%s_\n"  issue.Key url text status
 
-        let assignedIssues (issues : Json.ActiveIssuesResponse.Issue[]) = 
+        let filteredIssuesToString issues filter = 
             issues
-            |> Array.filter (fun i -> i.Fields.Assignee.IsSome)
-            |> Array.map toString
-            |> String.Concat 
-        let unassignedIssues (issues : Json.ActiveIssuesResponse.Issue[]) = 
-            issues
-            |> Array.filter (fun i -> i.Fields.Assignee.IsNone)
-            |> Array.map toString
+            |> Array.filter filter
+            |> Array.map issueToString
             |> String.Concat 
 
-        let issuestoString (issues : Json.ActiveIssuesResponse.Issue[]) = 
+        let assignedIssues issues = 
+            filteredIssuesToString issues (fun i -> i.Fields.Assignee.IsSome)
+         
+        let unassignedIssues issues =
+            filteredIssuesToString issues (fun i -> i.Fields.Assignee.IsNone)  
+
+        let issuestoString issues = 
             sprintf "*Assigned to you:*\n%s\n*Unassigned:*\n%s" (assignedIssues issues) (unassignedIssues issues)
 
         match response with
         |Some issues -> issuestoString issues.Issues
         |None -> "Issues not found"
 
+    let keyboardMarkup buttonMarkup buttons = 
+        let rowMarkup row = 
+           sprintf "[%s]" (String.concat "," (row |> Array.map buttonMarkup))
+        sprintf "[%s]" (String.concat "," (buttons |> Array.map rowMarkup))
+
     let toInlineLeyboard (buttons: DataClasses.InlineButton[][]) = 
         let buttonMarkup (button: DataClasses.InlineButton) = 
            sprintf "{\"text\": \"%s\", \"callback_data\": \"%s\"}" button.text button.callback
-        let rowMarkup (buttons:DataClasses.InlineButton[]) = 
-           sprintf "[%s]" (String.concat "," (buttons |> Array.map buttonMarkup))
-        let keyboardMarkup (buttons: DataClasses.InlineButton[][]) = 
-           sprintf "[%s]" (String.concat "," (buttons |> Array.map rowMarkup))
-        sprintf "{\"inline_keyboard\":%s}" (keyboardMarkup buttons)
+        sprintf "{\"inline_keyboard\":%s}" (keyboardMarkup buttonMarkup buttons)
 
-
+    let toMarkupKeyboard (buttons: string[][]) = 
+        let buttonMarkup button = sprintf "\"%s\"" button
+        sprintf "{\"keyboard\":%s, \"one_time_keyboard\": true,\"resize_keyboard\": true}" (keyboardMarkup buttonMarkup buttons)

@@ -60,8 +60,8 @@ module Telegram =
     let query = ["chat_id", chatId.ToString(); "message_id", messageId.ToString(); "text", newText]
     sendQuery editMessageEndpoint query
 
-  let showReplyMarkupKeyboard chatId text =
-    let keyboard =  "{\"keyboard\":[[\"Hello\"], [\"Sun\", \"Moon\"], [\"11\",\"22\",\"33\",\"44\",\"55\"]], \"one_time_keyboard\": true,\"resize_keyboard\": true}"
+  let showReplyMarkupKeyboard chatId text buttons =
+    let keyboard = TelegramMarkdown.toMarkupKeyboard buttons
     let query = ["chat_id", chatId.ToString(); "text", text; "reply_markup", keyboard]
     sendQuery sendMessageEndpoint query
 

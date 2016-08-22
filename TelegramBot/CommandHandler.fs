@@ -9,7 +9,7 @@ module CommandHandler =
         match command with
         |"/hi"|"/hello" -> reply ("Nice to meet you, " + firstname)
         |"/git" -> reply (BitBucket.getCommitStatistics (sender))
-        |"/k" -> Telegram.showReplyMarkupKeyboard chatId ("i'm trying to show keyboard, " + firstname)
+        |"/k" -> Telegram.showReplyMarkupKeyboard chatId ("i'm trying to show keyboard, " + firstname) ([|[|"alpha"; "beta"|];[|"omega"|]|])
         |"/h" -> Telegram.hideReplyMarkupKeyboard chatId ("i'm trying to hide keyboard, " + firstname)
         |"/creds" -> reply (TelegramMarkdown.credentialsAsString(UserConfigProvider.getUser(sender)))
         |"/setlogin" |"/setl" |"/setemail" -> reply (BitBucket.setLogin sender args)

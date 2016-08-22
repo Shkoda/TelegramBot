@@ -18,8 +18,6 @@ module Jira =
         Http.authorizedRequest url config.Email config.Password 
         |> bind (Json.ActiveSprintResponse.Parse >> Json.activeSprintId)
 
-
-
     let getNotClosedIssuesFromSprint (config:Json.UserConfig.Jira) (sprintId)= 
         let url = sprintf "https://reddotsquare.atlassian.net/rest/agile/1.0/board/%i/sprint/%i/issue?jql=(assignee=currentuser() OR assignee=null) AND status not in (\"To review\", \"QA Ready\", \"Done\") " config.BoardId sprintId
         Http.authorizedRequest url config.Email config.Password 

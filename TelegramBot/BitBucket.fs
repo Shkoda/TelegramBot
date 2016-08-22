@@ -5,7 +5,6 @@ module BitBucket =
     let cuttlefishCommitsUrl = bitbucketApiUrl + "repositories/reddotsquaresolutions/unity-cuttlefish/commits?page="
     let userInfoUrl = bitbucketApiUrl + "user"
    
-
     let getCommitsFromPage page email pass=
          let url = sprintf "%s%i"cuttlefishCommitsUrl page
          Http.authorizedRequest url email pass
