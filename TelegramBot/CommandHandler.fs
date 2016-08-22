@@ -11,13 +11,12 @@ module CommandHandler =
         |"/git" -> reply (BitBucket.getCommitStatistics (sender))
         |"/k" -> Telegram.showReplyMarkupKeyboard chatId ("i'm trying to show keyboard, " + firstname)
         |"/h" -> Telegram.hideReplyMarkupKeyboard chatId ("i'm trying to hide keyboard, " + firstname)
-        |"/ik" ->  Telegram.showInlineKeyboard chatId ("i'm trying to show inline keyboard, " + firstname)
         |"/creds" -> reply (TelegramMarkdown.credentialsAsString(UserConfigProvider.getUser(sender)))
         |"/setlogin" |"/setl" |"/setemail" -> reply (BitBucket.setLogin sender args)
         |"/setpass" |"/setpassword" |"/setp" -> reply (BitBucket.setPassword sender args)
         |"/jirauser" -> reply (Jira.userinfo (UserConfigProvider.getUser(sender).Jira))
         |"/issues" -> reply (TelegramMarkdown.issuesToString(Jira.getNotClosedIssuesCurrentSprint (UserConfigProvider.getUser(sender).Jira)))
-        |"/ik2" -> Telegram.showConfigurableInlineKeyboard chatId [| [|{text = "a"; callback="ca"} |]; [|{text = "b"; callback="cb"} |]|]
+        |"/ik" -> Telegram.showConfigurableInlineKeyboard chatId [| [|{text = "a"; callback="ca"} |]; [|{text = "b"; callback="cb"} |]|]
         | _ -> reply (sprintf "I don't know %s command, %s" command firstname)
     
     let handleInlineResponse (response: Json.Update.CallbackQuery) = 

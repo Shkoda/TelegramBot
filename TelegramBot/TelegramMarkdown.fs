@@ -94,5 +94,13 @@ module TelegramMarkdown =
         |Some issues -> issuestoString issues.Issues
         |None -> "Issues not found"
 
+    let toInlineLeyboard (buttons: DataClasses.InlineButton[][]) = 
+        let buttonMarkup (button: DataClasses.InlineButton) = 
+           sprintf "{\"text\": \"%s\", \"callback_data\": \"%s\"}" button.text button.callback
+        let rowMarkup (buttons:DataClasses.InlineButton[]) = 
+           sprintf "[%s]" (String.concat "," (buttons |> Array.map buttonMarkup))
+        let keyboardMarkup (buttons: DataClasses.InlineButton[][]) = 
+           sprintf "[%s]" (String.concat "," (buttons |> Array.map rowMarkup))
+        sprintf "{\"inline_keyboard\":%s}" (keyboardMarkup buttons)
 
 
