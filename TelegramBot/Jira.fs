@@ -28,3 +28,10 @@ module Jira =
      | Some id -> getNotClosedIssuesFromSprint config id
      | None -> None
 
+//https://reddotsquare.atlassian.net/rest/api/2/issue/NG-13721/worklog
+//{
+//"timeSpent": "1h 30m",
+//"started": "2013-09-01T10:30:18.932+0530",
+//"comment": "logging via powershell"
+//}
+
