@@ -17,6 +17,7 @@ module CommandHandler =
         |"/jirauser" -> reply (Jira.userinfo (UserConfigProvider.getUser(sender).Jira))
         |"/issues" -> reply (TelegramMarkdown.issuesToString(Jira.getNotClosedIssuesCurrentSprint (UserConfigProvider.getUser(sender).Jira)))
         |"/ik" -> Telegram.showConfigurableInlineKeyboard chatId [| [|{text = "a"; callback="ca"} |]; [|{text = "b"; callback="cb"} |]|]
+        |"/log" -> reply (Jira.logWork (UserConfigProvider.getUser(sender).Jira) "NG-13721" 1)
         | _ -> reply (sprintf "I don't know %s command, %s" command firstname)
     
     let handleInlineResponse (response: Json.Update.CallbackQuery) = 

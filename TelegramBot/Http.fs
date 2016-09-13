@@ -1,6 +1,7 @@
 ﻿namespace Shkoda.Telegram.Bot
 module Http = 
     open FSharp.Data
+    open FSharp.Data.HttpRequestHeaders
     open System
     open System.Text
 
@@ -14,3 +15,12 @@ module Http =
             Http.RequestString (url,  headers = ["Authorization", basicAuthHeaderValue email password]) |> Some
         with 
         | ex -> printf "AuthorizedRequest exception: %s" ex.Message; None 
+    
+    let authorizedPostRequest url requestJson email password = 
+        try
+            Http.RequestString(url, httpMethod = "POST", 
+                headers = ["Authorization", basicAuthHeaderValue email password; ContentType HttpContentTypes.Json], 
+                body = TextRequest requestJson) |> Some
+           // Http.RequestString (url,  headers = ["Authorization", basicAuthHeaderValue email password]) |> Some
+        with 
+        | ex -> printf "AuthorizedRequest exception: %s" ex.Message; None  
