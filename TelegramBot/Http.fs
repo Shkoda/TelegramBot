@@ -21,6 +21,5 @@ module Http =
             Http.RequestString(url, httpMethod = "POST", 
                 headers = ["Authorization", basicAuthHeaderValue email password; ContentType HttpContentTypes.Json], 
                 body = TextRequest requestJson) |> Some
-           // Http.RequestString (url,  headers = ["Authorization", basicAuthHeaderValue email password]) |> Some
         with 
         | ex -> printf "AuthorizedRequest exception: %s" ex.Message; None  
