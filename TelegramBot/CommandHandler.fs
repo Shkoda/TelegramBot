@@ -28,6 +28,9 @@ module CommandHandler =
         Telegram.overrideInlineKeyboard response.Message.Chat.Id response.Message.MessageId 
             [| [|{text = randomString(); callback="ca"} |]; [|{text = randomString(); callback="cb"} |]|] 
 
+    let handleInlineQuery (query: Json.Update.InlineQuery) = 
+        Telegram.answerInlineQuery query.Id 
+
     let handle (update : Json.Update.Result) =
         let reply text = Telegram.sendMessage (Json.chatId update) text
         match update with
@@ -36,7 +39,8 @@ module CommandHandler =
                                 | CommandParser.Invalid i -> reply (sprintf "Invalid input: %s" i)
                                 | CommandParser.Text t -> reply (sprintf "Text received: %s" t)
                                 | CommandParser.Command (c, args) -> handleCommand (c,args) update
-        | Json.InlineResponce i ->  handleInlineResponse i//reply (sprintf "Inline responce %s" i.Data)
+        | Json.InlineResponce ir ->  handleInlineResponse ir//reply (sprintf "Inline responce %s" i.Data)
+        | Json.InlineQuery iq -> handleInlineQuery iq
         | _ -> raise (System.ArgumentException("can't handle update"))
 
  

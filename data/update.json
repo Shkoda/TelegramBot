@@ -83,6 +83,20 @@
         },
         "data": "this is callback data"
       }
+    },
+    {
+      "update_id": 736904665,
+      "inline_query": {
+        "id": "724388316997526903hh",
+        "from": {
+          "id": 168659798,
+          "first_name": "Shkoda",
+          "last_name": "Aleceya",
+          "username": "freilin"
+        },
+        "query": "",
+        "offset": ""
+      }
     }
   ]
 }

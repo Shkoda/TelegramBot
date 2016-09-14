@@ -10,10 +10,11 @@ module Json =
     type ActiveSprintResponse =  JsonProvider<"../data/active_sprint_response.json">
     type ActiveIssuesResponse =  JsonProvider<"../data/active_issues_response.json">
 
-    let (|UserMessage|InlineResponce|UnknownFormat|) (update:Update.Result) = 
+    let (|UserMessage|InlineResponce|InlineQuery|UnknownFormat|) (update:Update.Result) = 
         match update with
         |u when u.Message.IsSome -> UserMessage (u.Message.Value)
         |u when u.CallbackQuery.IsSome -> InlineResponce (u.CallbackQuery.Value)
+        |u when u.InlineQuery.IsSome -> InlineQuery (u.InlineQuery.Value)
         |_ -> UnknownFormat (update)
 
     let chatId (update : Update.Result) = 

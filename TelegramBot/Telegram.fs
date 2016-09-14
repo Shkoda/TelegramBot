@@ -21,6 +21,7 @@ module Telegram =
   let sendMessageEndpoint = endpoint TOKEN "sendMessage"
   let editInlineKeyboardEndpoint = endpoint TOKEN "editMessageReplyMarkup"
   let editMessageEndpoint = endpoint TOKEN "editMessageText"
+  let inlineQueryEndpoint = endpoint TOKEN "answerInlineQuery"
 
   let nextOffset (results:Json.Update.Result[]) = 
      let updateId (result: Json.Update.Result) = result.UpdateId    
@@ -83,4 +84,11 @@ module Telegram =
 
   let overrideInlineKeyboard chatId messageId (buttons: DataClasses.InlineButton[][]) = 
     editInlineKeyboard chatId messageId (TelegramMarkdown.toInlineLeyboard buttons)
+
+  let someInlineQueryResultArticle = 
+    "{\"type\":\"article\",\"id\":\"someId\",\"title\":\"pink floyd\", \"input_message_content\": {\"message_text\":\"fuck it anyway\"}}"
+
+  let answerInlineQuery inlineQueryId = 
+    let query = ["inline_query_id", inlineQueryId; "results", (sprintf "[%s]"someInlineQueryResultArticle)]
+    sendQuery inlineQueryEndpoint query
 
